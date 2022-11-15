@@ -50,6 +50,9 @@ TagManager:
   - name: Entities
     uniqueID: 1039117127
     locked: 0
+  - name: Player
+    uniqueID: 3284516827
+    locked: 0
   - name: FrontSprites
     uniqueID: 1274173343
     locked: 0
