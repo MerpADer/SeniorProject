@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tiles
+    uniqueID: 1554287571
+    locked: 0
+  - name: BackEntities
+    uniqueID: 415997685
+    locked: 0
+  - name: Entities
+    uniqueID: 1039117127
+    locked: 0
+  - name: FrontSprites
+    uniqueID: 1274173343
+    locked: 0
