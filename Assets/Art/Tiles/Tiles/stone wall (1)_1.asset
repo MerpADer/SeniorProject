@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: stone flooring with carpet (2)
+  m_Name: stone wall (1)_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: cad19c77b4ed608458e7c567f2dc5dca, type: 3}
+  m_Sprite: {fileID: 676213594, guid: 79c065e17da3b7a4e86a3a725647e7ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

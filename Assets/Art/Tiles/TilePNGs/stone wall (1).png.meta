@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f16480e10d7a80d4e8fa0a51862895bc
+guid: 79c065e17da3b7a4e86a3a725647e7ea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2048
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stone wall_0
+      name: stone wall (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1920
-        width: 2048
-        height: 1920
+        y: 60
+        width: 64
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 710ae322214605d4fb3dfad2a398d70a
-      internalID: 69387432
+      spriteID: 6f97ffe7e17f91040928f25113fc2f3b
+      internalID: 1948428161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stone wall_1
+      name: stone wall (1)_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 1920
+        width: 64
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961b71a356d421b4bbfe7015766bf785
-      internalID: -1246334168
+      spriteID: a7a23894d2bc5b14c8956d569ccc11c8
+      internalID: 676213594
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone wall_0: 69387432
-      stone wall_1: -1246334168
+      stone wall (1)_0: 1948428161
+      stone wall (1)_1: 676213594
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

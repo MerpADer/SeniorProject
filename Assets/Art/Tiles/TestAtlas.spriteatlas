@@ -43,18 +43,13 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 2800000, guid: f16480e10d7a80d4e8fa0a51862895bc, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: -1246334168, guid: f16480e10d7a80d4e8fa0a51862895bc, type: 3}
-  - {fileID: 69387432, guid: f16480e10d7a80d4e8fa0a51862895bc, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - stone wall_1
-  - stone wall_0
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: TestAtlas
   m_IsVariant: 0
