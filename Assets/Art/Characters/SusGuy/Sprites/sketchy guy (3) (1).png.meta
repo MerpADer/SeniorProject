@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a1aea88b3a5bf443a1fcfbab7a58913
+guid: effae428300829344b800fbd7dac1885
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2048
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knight red_blue (1)_0
+      name: sketchy guy (3) (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2048
-        width: 2048
-        height: 2048
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53fa8bb3067d01546a5365760570a0d9
-      internalID: 249410095
+      spriteID: ef4aa79677472bc44942f698a7c8d22b
+      internalID: 934478415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight red_blue (1)_1
+      name: sketchy guy (3) (1)_1
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2048
-        width: 2048
-        height: 2048
+        x: 64
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb611726ea94fa4fa9005c7ad8b7f25
-      internalID: 1122659073
+      spriteID: 6273c2fcf7f682348af9422835bf3466
+      internalID: -197716702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight red_blue (1)_2
+      name: sketchy guy (3) (1)_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 2048
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c770b81ac5e2fb499a34fe9c69168b4
-      internalID: 609210731
+      spriteID: 3fe1cedb6453d7748babc0daecd69bbb
+      internalID: -309641105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knight red_blue (1)_3
+      name: sketchy guy (3) (1)_3
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 64
         y: 0
-        width: 2048
-        height: 2048
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7c148a140b14d742b7d5fa3dc28536d
-      internalID: -228857499
+      spriteID: 577ba37037b1efc42b421b4ef99bb2ec
+      internalID: 107031319
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      knight red_blue (1)_3: -228857499
-      knight red_blue (1)_2: 609210731
-      knight red_blue (1)_0: 249410095
-      knight red_blue (1)_1: 1122659073
+      sketchy guy (3) (1)_0: 934478415
+      sketchy guy (3) (1)_2: -309641105
+      sketchy guy (3) (1)_3: 107031319
+      sketchy guy (3) (1)_1: -197716702
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

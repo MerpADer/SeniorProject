@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: XanderIdle
+  m_Name: IdleKing
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1664601199, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
-    - time: 0.5
-      value: {fileID: -1311883635, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
-    - time: 1
-      value: {fileID: 81744085, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
+      value: {fileID: 1728938829, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
+    - time: 0.51666665
+      value: {fileID: -1394574262, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
+    - time: 0.98333335
+      value: {fileID: -38458821, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
     - time: 1.5
-      value: {fileID: 1692643931, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
+      value: {fileID: 371766296, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
     - time: 2
-      value: {fileID: 1664601199, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
+      value: {fileID: 1728938829, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,11 +48,11 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1664601199, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
-    - {fileID: -1311883635, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
-    - {fileID: 81744085, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
-    - {fileID: 1692643931, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
-    - {fileID: 1664601199, guid: 9e91b47f0a26f7a4e9f8f2255416bac3, type: 3}
+    - {fileID: 1728938829, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
+    - {fileID: -1394574262, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
+    - {fileID: -38458821, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
+    - {fileID: 371766296, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
+    - {fileID: 1728938829, guid: 6bbfdeac0c3a02b47b540ab23ff3b185, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
