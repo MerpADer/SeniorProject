@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fcd8ae99ed92a2f428194e2fee1d7c0b
+guid: f5a59c9b89545394cbeb033abcf6e152
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,11 +105,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main guy (1) (2)_0
+      name: main guy run_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 103
+        y: 110
         width: 64
         height: 71
       alignment: 0
@@ -119,18 +119,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48fcb33179d09c845979bd94b9c48d0c
-      internalID: 1026550833
+      spriteID: 4910edfee7f2b9f409d35e08f1ffcba8
+      internalID: 1059962533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main guy (1) (2)_1
+      name: main guy run_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 103
+        y: 110
         width: 64
         height: 71
       alignment: 0
@@ -140,18 +140,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78866ff3bd2ce3a45ad21118cffa9a03
-      internalID: 1855409821
+      spriteID: da0f5684f4284c64aa3223cc927d2802
+      internalID: 1104587453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main guy (1) (2)_2
+      name: main guy run_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 110
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb071a380c09eb4468963dfa9873e963
+      internalID: -2053023048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main guy run_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 7
+        y: 14
         width: 64
         height: 71
       alignment: 0
@@ -161,18 +182,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b413280d1e9bf3c49bb6d9effcf90e19
-      internalID: 241167852
+      spriteID: d37a9b4540e204a4d9e6dc6c941d1009
+      internalID: 355983581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main guy (1) (2)_3
+      name: main guy run_4
       rect:
         serializedVersion: 2
         x: 64
-        y: 7
+        y: 14
         width: 64
         height: 71
       alignment: 0
@@ -182,8 +203,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 320da4b8397f648409b89a1e0c6e00d3
-      internalID: 1744117380
+      spriteID: 7cb9931c11587454eb4525abeaed9cf6
+      internalID: -905208542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main guy run_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 14
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383fb0bd92ee27849a03f5e86d176391
+      internalID: 796200133
       vertices: []
       indices: 
       edges: []
@@ -199,10 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      main guy (1) (2)_1: 1855409821
-      main guy (1) (2)_0: 1026550833
-      main guy (1) (2)_2: 241167852
-      main guy (1) (2)_3: 1744117380
+      main guy run_5: 796200133
+      main guy run_0: 1059962533
+      main guy run_2: -2053023048
+      main guy run_4: -905208542
+      main guy run_3: 355983581
+      main guy run_1: 1104587453
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
