@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 404145422}
   - component: {fileID: 404145421}
   m_Layer: 0
-  m_Name: Knight
+  m_Name: Xander
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 864731636}
   - component: {fileID: 864731635}
   m_Layer: 0
-  m_Name: SketchGuy
+  m_Name: Marco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
