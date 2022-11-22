@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     [SerializeField] KeyCode leftKey;
     [SerializeField] KeyCode rightKey;
 
-    void Start()
+    void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         spr = gameObject.GetComponent<SpriteRenderer>();
