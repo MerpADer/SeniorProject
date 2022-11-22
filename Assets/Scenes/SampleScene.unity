@@ -496,8 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ed0696eec21e748bc7e8004d57ee03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howLong: 5
-  intensityChange: 0.5
+  howLong: 10
+  intensityChange: 0.25
 --- !u!114 &62364422
 MonoBehaviour:
   m_ObjectHideFlags: 0
