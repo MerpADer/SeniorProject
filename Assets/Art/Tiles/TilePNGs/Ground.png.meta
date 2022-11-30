@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7716836235cceb84493822565e4d15f4
+guid: 0c5353f139266ae4f8e52d940d14d1c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,22 +105,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: right carpet edge_0
+      name: New Piskel (12)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
+        y: 64
         width: 64
-        height: 60
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 23}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 23}
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6b09cb82dd20146b88fa6dc422a2e0
-      internalID: -741894517
+      spriteID: 006b0c9b9715b76468a18a81418dd05d
+      internalID: 350286419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (12)_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a599c7c74ff911840a54f2e72a66d569
+      internalID: 1309316756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (12)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f8734d8cff6254cb3bc5be3e649034
+      internalID: -86217000
       vertices: []
       indices: 
       edges: []
@@ -136,7 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      right carpet edge_0: -741894517
+      New Piskel (12)_1: 1309316756
+      New Piskel (12)_2: -86217000
+      New Piskel (12)_0: 350286419
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

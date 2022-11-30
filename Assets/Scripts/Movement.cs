@@ -9,10 +9,10 @@ public class Movement : MonoBehaviour
     private SpriteRenderer spr;
     private Animator anim;
 
-    [SerializeField] int speed;
+    [SerializeField] float speed;
 
-    [SerializeField] KeyCode leftKey;
-    [SerializeField] KeyCode rightKey;
+    public KeyCode leftKey;
+    public KeyCode rightKey;
 
     void Awake()
     {
@@ -46,5 +46,25 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
             anim.SetBool("isWalking", false);
         }
+    }
+
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey) && collision.gameObject.tag == "Slope")
+        {
+            rb.velocity = new Vector2(0, 0);
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 1;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        rb.velocity = new Vector2(0, 0);
+        rb.gravityScale = 1;
     }
 }
