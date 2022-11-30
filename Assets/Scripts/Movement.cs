@@ -64,7 +64,10 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        rb.velocity = new Vector2(0, 0);
+        if (collision.gameObject.tag == "Slope")
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
         rb.gravityScale = 1;
     }
 }
