@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TextBox : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class TextBox : MonoBehaviour
 
     [SerializeField] TMP_Text nametxt;
     [SerializeField] TMP_Text diatxt;
+    [SerializeField] Image backText;
 
     [SerializeField] string Name;
 
@@ -46,11 +48,13 @@ public class TextBox : MonoBehaviour
         {
             if (TextPrint(currIndex) != "")
             {
+                backText.gameObject.SetActive(true);
                 nametxt.text = Name;
                 diatxt.text = TextPrint(currIndex);
             }
             else
             {
+                backText.gameObject.SetActive(false);
                 nametxt.text = "";
                 diatxt.text = "";
                 Player.GetComponent<Movement>().enabled = true;
