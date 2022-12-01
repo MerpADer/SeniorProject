@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8707509322513552467}
   - component: {fileID: 8707509322513552476}
   - component: {fileID: -206152756279943794}
+  - component: {fileID: -3168780405547784768}
   m_Layer: 0
   m_Name: TextPrompt
   m_TagString: Untagged
@@ -97,4 +98,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df693b293a376d24baebff7f402a263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 3834082263300332664, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
+  nametxt: {fileID: 0}
+  diatxt: {fileID: 0}
+  backText: {fileID: 0}
+  Name: 
+  Dialogue: []
+--- !u!95 &-3168780405547784768
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8707509322513552477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29adddfca2f7f5a449a23da17fb61732, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
