@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+    // Initialize Components
     private Rigidbody2D rb;
     private SpriteRenderer spr;
     private Animator anim;
 
+    // used for horizontal movement
     [SerializeField] float speed;
 
+    // will be used to store playerprefs in the future
     public KeyCode leftKey;
     public KeyCode rightKey;
 
     void Awake()
     {
+        // Assign components
         rb = gameObject.GetComponent<Rigidbody2D>();
         spr = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
@@ -28,6 +31,8 @@ public class Movement : MonoBehaviour
 
     void HorizontalMovement()
     {
+        // If the player presses the left or right keys,
+        // it will move them in that direction and change their velocity towards it
         if (Input.GetKey(leftKey))
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
@@ -40,7 +45,7 @@ public class Movement : MonoBehaviour
             spr.flipX = false;
             anim.SetBool("isWalking", true);
         }
-
+        // when they let go of both keys it sets x vel to 0 and turns off animation
         if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
@@ -51,6 +56,7 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        // freezes the player so they don't fall off of a slope object
         if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey) && collision.gameObject.tag == "Slope")
         {
             rb.velocity = new Vector2(0, 0);
@@ -64,6 +70,8 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        // when they leave a slope I set the velocity to 0 because otherwise
+        // it will fly off
         if (collision.gameObject.tag == "Slope")
         {
             rb.velocity = new Vector2(0, 0);
