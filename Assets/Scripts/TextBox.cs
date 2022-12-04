@@ -11,11 +11,15 @@ public class TextBox : MonoBehaviour
     private SpriteRenderer spr;
 
     // all the UI variables, maybe find a way to make these private
+    [Header("UI variables (always the same)")]
     [SerializeField] TMP_Text nametxt;
     [SerializeField] TMP_Text diatxt;
+    [SerializeField] Image Portrait;
     [SerializeField] Image backText;
 
     // info needed to run through text loop
+    [Header("Specific text variables")]
+    [SerializeField] Sprite PortraitPicture;
     [SerializeField] string Name;
     [SerializeField] List<string> Dialogue;
     private int currIndex = -1;
@@ -43,6 +47,7 @@ public class TextBox : MonoBehaviour
         // press any key to progress dialogue
         if (lockPlayer && Input.anyKeyDown)
         {
+            Portrait.sprite = PortraitPicture;
             diatxt.text = "";
             currCharIndex = 0;
 
@@ -56,12 +61,14 @@ public class TextBox : MonoBehaviour
             }
             if (TextPrint(currIndex) != "")
             {
+                Portrait.gameObject.SetActive(true);
                 backText.gameObject.SetActive(true);
                 nametxt.text = Name;
             }
             // turn all the UI for text off and unlock player
             else
             {
+                Portrait.gameObject.SetActive(false);
                 backText.gameObject.SetActive(false);
                 nametxt.text = "";
                 diatxt.text = "";
