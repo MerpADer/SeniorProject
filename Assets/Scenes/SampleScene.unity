@@ -1544,7 +1544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420.06216, y: -364.04758}
+  m_AnchoredPosition: {x: -411, y: -401}
   m_SizeDelta: {x: 279.882, y: 150.083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142976168
@@ -2622,7 +2622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320806788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.66, y: 0.3, z: -10}
+  m_LocalPosition: {x: 8.05, y: 0.32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3455,15 +3455,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[0]
-      value: What do you want human?!
+      value: What do you want, human?!
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[1]
-      value: 'I only joined this alliance because '
+      value: My kingdom only joined this alliance because we need you fodder to take
+        them down ourselves!
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[2]
-      value: I don't like talking to YOU PEOPLE
+      value: I don't like talking to YOU PEOPLE, so get out of my sight!
       objectReference: {fileID: 0}
     - target: {fileID: 8707509322513552467, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: m_RootOrder
@@ -3679,7 +3680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.66, y: 0.3, z: -10}
+  m_LocalPosition: {x: 8.05, y: 0.32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10488,6 +10489,10 @@ PrefabInstance:
       propertyPath: backText
       value: 
       objectReference: {fileID: 1623673578}
+    - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8707509322513552467, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14676,6 +14681,22 @@ PrefabInstance:
       propertyPath: backText
       value: 
       objectReference: {fileID: 1623673578}
+    - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[0]
+      value: Hello there, little person!
+      objectReference: {fileID: 0}
+    - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[1]
+      value: Ah, I'm glad we can finally get this war going!
+      objectReference: {fileID: 0}
+    - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[2]
+      value: I don't care who it is, just show me and my troops the way to battle!
+      objectReference: {fileID: 0}
     - target: {fileID: 8707509322513552467, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -19397,11 +19418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834082263300332664, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.66
+      value: 8.05
       objectReference: {fileID: 0}
     - target: {fileID: 3834082263300332664, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 3834082263300332664, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19466,19 +19487,19 @@ PrefabInstance:
       objectReference: {fileID: 1623673578}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[0]
-      value: hello
+      value: Greetings
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[1]
-      value: world
+      value: Oh me? I'm no Noble, I'm here for... other reasons...
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[2]
-      value: namechange NAME1
+      value: heh... heh... heh...
       objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: Dialogue.Array.data[3]
