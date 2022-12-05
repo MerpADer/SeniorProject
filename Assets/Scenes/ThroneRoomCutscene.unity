@@ -20357,6 +20357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 8707509322513552477, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: m_TagString
+      value: SceneEnder
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
 --- !u!1 &1839142376
