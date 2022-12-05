@@ -92,7 +92,7 @@ public class TextBox : MonoBehaviour
     private void RevealTextSprite()
     {
         // if it's within .3 of the text box then it will reveal the text box
-        if (Mathf.Abs(Player.transform.position.x - transform.position.x) < 0.3f)
+        if (Mathf.Abs(Player.transform.position.x - transform.position.x) < 0.25f)
         {
             spr.enabled = true;
             // pressing "E" will only work once with the && !lockplayer
