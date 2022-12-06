@@ -25,9 +25,11 @@ public class SceneEditor : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 2f)
             {
-                NextScene();
                 anim.SetBool("IsFadedOut", false);
-                FindSceneEnder();
+                timer = 0;
+                NextScene();
+                sceneEnder = FindSceneEnder();
+                print(sceneEnder);
             }
         }
     }
@@ -41,6 +43,7 @@ public class SceneEditor : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        print(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void NextScene(int SceneNum)
