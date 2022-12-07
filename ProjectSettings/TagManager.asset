@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackTiles
+    uniqueID: 733342293
+    locked: 0
   - name: BackEntities
     uniqueID: 415997685
     locked: 0
