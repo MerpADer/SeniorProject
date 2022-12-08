@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Slope
-  - SceneEnder
+  - PlayerDamage
+  - EnemyDamage
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Player
+  - Enemies
   - 
   - 
   - 

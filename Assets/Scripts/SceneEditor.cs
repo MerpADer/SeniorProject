@@ -29,7 +29,7 @@ public class SceneEditor : MonoBehaviour
             {
                 anim.SetBool("IsFadedOut", false);
                 timer = 0;
-                NextScene();
+                NextScene(SceneEnderNum);
             }
         }
     }
