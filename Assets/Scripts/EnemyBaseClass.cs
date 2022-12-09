@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemyBaseClass : MonoBehaviour
 {
 
-    private GameObject Player;
+    [HideInInspector] public GameObject Player;
 
     //material stuff
     [HideInInspector] public SpriteRenderer spr;
-    private Material defaultMat;
+    [HideInInspector] public Material defaultMat;
     public Material FlashWhite;
 
     // basic variables
@@ -19,14 +19,12 @@ public class EnemyBaseClass : MonoBehaviour
 
     void Awake()
     {
-        Player = FindObjectOfType<Movement>().gameObject;
-        spr = GetComponent<SpriteRenderer>();
-        defaultMat = spr.material;
+        
     }
 
     void Update()
     {
-        print(playerIsDetected(3));
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,22 +35,22 @@ public class EnemyBaseClass : MonoBehaviour
         }
     }
 
-    public bool isFacingEnemy()
+    public bool isFacingObject(GameObject obj1, GameObject obj2)
     {
-        // if the player is to the left of the enemy and the sprite is not flipped, it is facing the enemy
-        if (Player.transform.position.x < transform.position.x && Player.GetComponent<SpriteRenderer>().flipX == false && spr.flipX == true)
+        // if obj1 is to the left of the obj2 and the sprite is not flipped, it is facing the obj2
+        if (obj1.transform.position.x < obj2.transform.position.x && obj1.GetComponent<SpriteRenderer>().flipX == false)
         {
             return true;
         }
         // reciprocal
-        else if (Player.transform.position.x > transform.position.x && Player.GetComponent<SpriteRenderer>().flipX == true && spr.flipX == false)
+        else if (obj1.transform.position.x > obj2.transform.position.x && obj1.GetComponent<SpriteRenderer>().flipX == true)
         {
             return true;
         }
         return false;
     }
 
-    public bool playerIsDetected(int distance)
+    public bool playerIsDetected(float distance)
     {
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < distance)
         {
@@ -68,7 +66,7 @@ public class EnemyBaseClass : MonoBehaviour
         if (hp <= 0)
             Destroy(gameObject);
         else
-            Invoke("ResetMat", 0.1f);
+            Invoke(nameof(ResetMat), 0.1f);
     }
 
     void ResetMat()

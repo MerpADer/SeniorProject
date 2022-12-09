@@ -5,39 +5,24 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
 
-    [SerializeField] float hp;
-    [SerializeField] bool isEnemy;
+    [SerializeField] int hp;
 
-    private Material defaultMat;
-    public Material FlashWhite;
+    [SerializeField] HealthBar healthBar;
+
     private SpriteRenderer spr;
 
     private void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
-        defaultMat = spr.material;
+        healthBar.SetMaxHealth(hp);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("PlayerDamage") && isEnemy)
+        if (collision.CompareTag("EnemyDamage"))
         {
-            hp -= collision.GetComponent<AttackStats>().AttackDmg;
-            spr.material = FlashWhite;
-            if (hp <= 0)
-                Destroy(gameObject);
-            else
-                Invoke("ResetMat", 0.1f);
+            healthBar.SetHealth(hp);
         }
-        else if (collision.CompareTag("EnemyDamage") && !isEnemy)
-        {
-
-        }
-    }
-
-    void ResetMat()
-    {
-        spr.material = defaultMat;
     }
 
 }
