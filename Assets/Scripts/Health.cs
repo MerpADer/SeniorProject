@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
     {
         if (collision.CompareTag("EnemyDamage"))
         {
+            hp -= collision.GetComponent<AttackStats>().AttackDmg;
             healthBar.SetHealth(hp);
         }
     }

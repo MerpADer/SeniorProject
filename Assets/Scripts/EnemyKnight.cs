@@ -40,16 +40,17 @@ public class EnemyKnight : EnemyBaseClass
             if (timer >= TurnTime)
             {
                 spr.flipX = !spr.flipX;
+                GetComponentInChildren<AttackStats>().gameObject.transform.localScale *= new Vector2(-1, 1);
             }
         }
         else
         {
             timer = 0;
             // enemy movement towards player
-            if (playerIsDetected(0.5f))
+            if (playerIsDetected(0.4f))
             {
                 rb.velocity = new Vector2(0, 0);
-                Invoke(nameof(AttackPlayer), 1f);
+                Invoke(nameof(AttackPlayer), 0.5f);
             }
             else if (spr.flipX == false)
             {
