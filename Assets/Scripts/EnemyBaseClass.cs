@@ -13,25 +13,16 @@ public class EnemyBaseClass : MonoBehaviour
     public Material FlashWhite;
 
     // basic variables
-    [SerializeField] float hp;
+    public int hp;
     public float speed;
     public float TurnTime;
-
-    void Awake()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerDamage"))
         {
             ThisFlashWhite(collision.gameObject);
+            GetComponentInChildren<HealthBar>().SetHealth(hp);
         }
     }
 
