@@ -20,7 +20,7 @@ public class EnemyKnight : EnemyBaseClass
         spr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         defaultMat = spr.material;
-        GetComponentInChildren<HealthBar>().SetMaxHealth(hp);
+        GetComponentInChildren<HealthBar>().SetMaxHealth(hp, armor);
     }
 
     void Update()

@@ -14,6 +14,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     // basic variables
     public int hp;
+    public int armor;
     public float speed;
     public float TurnTime;
 
@@ -22,7 +23,7 @@ public class EnemyBaseClass : MonoBehaviour
         if (collision.CompareTag("PlayerDamage"))
         {
             ThisFlashWhite(collision.gameObject);
-            GetComponentInChildren<HealthBar>().SetHealth(hp);
+            GetComponentInChildren<HealthBar>().SetHealth(hp, armor);
         }
     }
 
@@ -52,8 +53,15 @@ public class EnemyBaseClass : MonoBehaviour
 
     void ThisFlashWhite(GameObject obj)
     {
-        hp -= obj.GetComponent<AttackStats>().AttackDmg;
+        // chooses which health value to hit when player deals damage
+        if (armor <= 0 || !isFacingObject(gameObject, Player))
+            hp -= obj.GetComponent<AttackStats>().AttackDmg;
+        else
+            armor -= obj.GetComponent<AttackStats>().AttackDmg;
+
+        // enemy flashes white to signify damage being dealt
         spr.material = FlashWhite;
+
         if (hp <= 0)
             Destroy(gameObject);
         else

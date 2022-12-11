@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
 
     [SerializeField] int hp;
+    [SerializeField] int armor;
 
     [SerializeField] HealthBar healthBar;
 
@@ -14,7 +15,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
-        healthBar.SetMaxHealth(hp);
+        healthBar.SetMaxHealth(hp, armor);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,7 +23,7 @@ public class Health : MonoBehaviour
         if (collision.CompareTag("EnemyDamage"))
         {
             hp -= collision.GetComponent<AttackStats>().AttackDmg;
-            healthBar.SetHealth(hp);
+            healthBar.SetHealth(hp, armor);
         }
     }
 

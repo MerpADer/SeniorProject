@@ -38,14 +38,14 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             spr.flipX = true;
             anim.SetBool("isWalking", true);
-            GetComponentInChildren<AttackStats>().gameObject.transform.localScale *= new Vector2(-1, 1);
+            GetComponentInChildren<AttackStats>().gameObject.transform.localScale = new Vector2(-1, 1);
         }
         if (Input.GetKey(rightKey))
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
             spr.flipX = false;
             anim.SetBool("isWalking", true);
-            GetComponentInChildren<AttackStats>().gameObject.transform.localScale *= new Vector2(-1, 1);
+            GetComponentInChildren<AttackStats>().gameObject.transform.localScale = new Vector2(1, 1);
         }
         // when they let go of both keys it sets x vel to 0 and turns off animation
         if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey))
