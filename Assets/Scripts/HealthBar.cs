@@ -6,17 +6,36 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
 
-    [SerializeField] Slider slider;
+    [SerializeField] Slider redSlider;
+    [SerializeField] Slider whiteSlider;
+
+    // the whiteSlider starting value when WhiteHealthDecay starts
+    private float startingWhiteValue;
 
     public void SetMaxHealth(int health)
     {
-        slider.maxValue = health;
-        slider.value = health;
+        redSlider.maxValue = health;
+        redSlider.value = health;
+        whiteSlider.maxValue = health;
+        whiteSlider.value = health;
     }
 
     public void SetHealth(int health)
     {
-        slider.value = health;
+        redSlider.value = health;
+        startingWhiteValue = whiteSlider.value;
+        InvokeRepeating(nameof(WhiteHealthDecay), 0.3f, .01f);
+    }
+
+    void WhiteHealthDecay()
+    {
+        if (whiteSlider.value <= redSlider.value)
+        {
+            CancelInvoke();
+        }
+        float min = redSlider.value;
+        float decayVal = (startingWhiteValue - min) / 100;
+        whiteSlider.value -= decayVal;
     }
 
 }
