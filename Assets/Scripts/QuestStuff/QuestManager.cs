@@ -20,7 +20,15 @@ public class QuestManager : MonoBehaviour
     void Update()
     {
         QuestName.text = currentQuest.questName;
-        //this hurts to read
-        QuestStepDescription.text = currentQuest.questSteps[currentQuest.questStepIndex].StepDescription;
+
+        if (currentQuest.questStepIndex >= currentQuest.questSteps.Count)
+        {
+            QuestStepDescription.text = "Quest Complete";
+        }
+        else
+        {
+            //this hurts to read
+            QuestStepDescription.text = currentQuest.questSteps[currentQuest.questStepIndex].StepDescription;
+        }
     }
 }

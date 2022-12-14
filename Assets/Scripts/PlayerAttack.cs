@@ -21,5 +21,10 @@ public class PlayerAttack : MonoBehaviour
             anim.SetTrigger("isAttacking");
             rb.velocity = new Vector2(0, 0);
         }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            anim.SetTrigger("isParrying");
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 }

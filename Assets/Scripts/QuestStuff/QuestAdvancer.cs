@@ -9,27 +9,36 @@ public class QuestAdvancer : MonoBehaviour
 
     private TypeOfStep typeOfStep;
 
-    private GameObject textBox;
+    private GameObject objective;
 
     private void Awake()
     {
         typeOfStep = quest.questSteps[questStepIndex].typeOfStep;
         if (typeOfStep == TypeOfStep.Talk)
         {
-            textBox = GetComponentInChildren<TextBox>().gameObject;
+            objective = GetComponentInChildren<TextBox>().gameObject;
         }
         else if (typeOfStep == TypeOfStep.EnterArea)
         {
-            textBox = GetComponentInChildren<TextBox>().gameObject;
+            objective = GetComponent<BoxCollider2D>().gameObject;
         }
     }
 
     private void Update()
     {
-        if (textBox == null && questStepIndex == quest.questStepIndex)
+        if (objective == null && questStepIndex == quest.questStepIndex)
         {
             quest.questStepIndex++;
             Destroy(this);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && questStepIndex == quest.questStepIndex)
+        {
+            quest.questStepIndex++;
+            Destroy(gameObject);
         }
     }
 
