@@ -7,6 +7,7 @@ public class Parallax : MonoBehaviour
 
     [SerializeField] Transform followObj;
     [SerializeField] Vector2 offset;
+    [SerializeField] float ParallaxSlow;
 
     private Vector2 firstPos;
 
@@ -17,7 +18,7 @@ public class Parallax : MonoBehaviour
 
     void Update()
     {
-        offset.x = (firstPos.x - followObj.position.x) / 3;
+        offset.x = (firstPos.x - followObj.position.x) / ParallaxSlow;
 
         transform.position = new Vector3(followObj.position.x + offset.x, offset.y);
     }
