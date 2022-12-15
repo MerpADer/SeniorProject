@@ -9,8 +9,6 @@ public class EnemyKnight : EnemyBaseClass
 
     private bool isLockedOn = false;
 
-    private Rigidbody2D rb;
-
     private Animator anim;
 
     void Awake()
@@ -25,7 +23,7 @@ public class EnemyKnight : EnemyBaseClass
 
     void Update()
     {
-        if (playerIsDetected(3))
+        if (playerIsDetected(5))
             isLockedOn = true;
 
         if (isLockedOn)
@@ -48,9 +46,8 @@ public class EnemyKnight : EnemyBaseClass
         {
             timer = 0;
             // enemy movement towards player
-            if (playerIsDetected(0.4f))
+            if (playerIsDetected(0.45f))
             {
-                rb.velocity = new Vector2(0, 0);
                 Invoke(nameof(AttackPlayer), 0.5f);
             }
             else if (spr.flipX == false)

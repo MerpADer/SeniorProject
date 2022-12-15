@@ -7,19 +7,27 @@ public class EnemyBaseClass : MonoBehaviour
 
     [HideInInspector] public GameObject Player;
 
-    //material stuff
+    [Header("material stuff")]
     [HideInInspector] public SpriteRenderer spr;
     [HideInInspector] public Material defaultMat;
     public Material FlashWhite;
 
-    // basic variables
+    [Header("basic variables")]
     public int hp;
     public int armor;
     public float speed;
     public float TurnTime;
 
+    [Header("how much enemy bounces off")]
+    [SerializeField] Vector2 BounceDist;
+    [HideInInspector] public Rigidbody2D rb;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("PlayerParry")) // && isFacingObject(collision.gameObject, gameObject)
+        {
+            BounceOff();
+        }
         if (collision.CompareTag("PlayerDamage"))
         {
             ThisFlashWhite(collision.gameObject);
@@ -71,6 +79,11 @@ public class EnemyBaseClass : MonoBehaviour
     void ResetMat()
     {
         spr.material = defaultMat;
+    }
+
+    private void BounceOff()
+    {
+        rb.velocity += BounceDist;
     }
 
 }
