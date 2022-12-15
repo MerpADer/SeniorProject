@@ -23,7 +23,7 @@ public class EnemyKnight : EnemyBaseClass
 
     void Update()
     {
-        if (playerIsDetected(5))
+        if (playerIsDetected(3))
             isLockedOn = true;
 
         if (isLockedOn)
@@ -48,14 +48,17 @@ public class EnemyKnight : EnemyBaseClass
             // enemy movement towards player
             if (playerIsDetected(0.45f))
             {
+                anim.SetBool("isRunning", false);
                 Invoke(nameof(AttackPlayer), 0.5f);
             }
             else if (spr.flipX == false)
             {
+                anim.SetBool("isRunning", true);
                 rb.velocity = new Vector2(speed, 0);
             }
             else if (spr.flipX == true)
             {
+                anim.SetBool("isRunning", true);
                 rb.velocity = new Vector2(-speed, 0);
             }
         }
