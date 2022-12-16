@@ -11,6 +11,8 @@ public class EnemyKnight : EnemyBaseClass
 
     private Animator anim;
 
+    private double AttackTimer = 0f;
+
     void Awake()
     {
         Player = FindObjectOfType<Movement>().gameObject;
@@ -23,6 +25,7 @@ public class EnemyKnight : EnemyBaseClass
 
     void Update()
     {
+
         if (playerIsDetected(3))
             isLockedOn = true;
 
@@ -49,14 +52,19 @@ public class EnemyKnight : EnemyBaseClass
             if (playerIsDetected(0.45f))
             {
                 anim.SetBool("isRunning", false);
-                Invoke(nameof(AttackPlayer), 0.5f);
+
+                AttackTimer += Time.deltaTime;
+
+                if(AttackTimer >= 0.5f)
+                    AttackPlayer();
+
             }
-            else if (spr.flipX == false)
+            else if (spr.flipX == false && !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackLizard"))
             {
                 anim.SetBool("isRunning", true);
                 rb.velocity = new Vector2(speed, 0);
             }
-            else if (spr.flipX == true)
+            else if (spr.flipX == true && !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackLizard"))
             {
                 anim.SetBool("isRunning", true);
                 rb.velocity = new Vector2(-speed, 0);
@@ -66,6 +74,6 @@ public class EnemyKnight : EnemyBaseClass
     private void AttackPlayer()
     {
         anim.SetTrigger("isAttacking");
-        CancelInvoke(nameof(AttackPlayer));
+        AttackTimer = 0;
     }
 }
