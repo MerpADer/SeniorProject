@@ -726,12 +726,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2062727561}
         m_TargetAssemblyTypeName: SceneEditor, Assembly-CSharp
-        m_MethodName: NextScene
-        m_Mode: 3
+        m_MethodName: fadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -811,7 +811,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.26900145, g: 0.46490026, b: 0.8773585, a: 0}
+  m_BackGroundColor: {r: 0.12661673, g: 0.38096428, b: 0.9150943, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

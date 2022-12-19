@@ -12,8 +12,11 @@ public class SceneEditor : MonoBehaviour
 
     private float timer = 0f;
 
+    private bool firstLoad;
+
     private void Start()
     {
+        firstLoad = true;
         DontDestroyOnLoad(gameObject);
         sceneEnder = FindSceneEnder();
         SceneEnderNum = sceneEnder.SceneNum;
@@ -21,17 +24,29 @@ public class SceneEditor : MonoBehaviour
 
     private void Update()
     {
-        if (sceneEnder == null)
+        if (sceneEnder == null && firstLoad)
         {
-            anim.SetBool("IsFadedOut", true);
-            timer += Time.deltaTime;
-            if (timer >= 2f)
-            {
-                anim.SetBool("IsFadedOut", false);
-                timer = 0;
-                NextScene(SceneEnderNum);
-            }
+            firstLoad = false;
+            fadeOut();
         }
+    }
+
+    public void fadeOut()
+    {
+        anim.SetBool("IsFadedOut", true);
+        //timer += Time.deltaTime;
+        //if (timer >= 2f)
+        //{
+        //    fadeIn();
+        //}
+        Invoke(nameof(fadeIn), 2f);
+    }
+
+    public void fadeIn()
+    {
+        anim.SetBool("IsFadedOut", false);
+        timer = 0;
+        NextScene(SceneEnderNum);
     }
 
     // these 3 methods do stuff when we load a new scene
@@ -49,6 +64,7 @@ public class SceneEditor : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        firstLoad = true;
         sceneEnder = FindSceneEnder();
         SceneEnderNum = sceneEnder.SceneNum;
     }
