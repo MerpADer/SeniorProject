@@ -8,6 +8,7 @@ TagManager:
   - PlayerDamage
   - EnemyDamage
   - PlayerParry
+  - Shredder
   layers:
   - Default
   - TransparentFX
