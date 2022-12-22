@@ -6746,7 +6746,7 @@ GameObject:
   - component: {fileID: 569709956}
   - component: {fileID: 569709955}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RoomCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29213,6 +29213,10 @@ PrefabInstance:
     - target: {fileID: 1342088013815244865, guid: a1c727bc6057afb4fb91ab32e3dcd1e1, type: 3}
       propertyPath: m_Size.x
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342088013815244865, guid: a1c727bc6057afb4fb91ab32e3dcd1e1, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1342088013815244865, guid: a1c727bc6057afb4fb91ab32e3dcd1e1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
