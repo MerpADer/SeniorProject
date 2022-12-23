@@ -7,18 +7,18 @@ public class EnemyBaseClass : MonoBehaviour
 
     [HideInInspector] public GameObject Player;
 
-    [Header("material stuff")]
+    [Header("Material stuff")]
     [HideInInspector] public SpriteRenderer spr;
     [HideInInspector] public Material defaultMat;
     public Material FlashWhite;
 
-    [Header("basic variables")]
+    [Header("Basic variables")]
     public int hp;
     public int armor;
     public float speed;
     public float TurnTime;
 
-    [Header("how much enemy bounces off")]
+    [Header("How much enemy bounces off")]
     [SerializeField] Vector2 BounceDist;
     [HideInInspector] public Rigidbody2D rb;
 
