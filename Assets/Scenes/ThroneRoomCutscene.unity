@@ -25553,6 +25553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863196976}
   - component: {fileID: 1863196977}
+  - component: {fileID: 1863196978}
   m_Layer: 7
   m_Name: ParryBox
   m_TagString: PlayerParry
@@ -25601,6 +25602,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.71}
   m_EdgeRadius: 0
+--- !u!114 &1863196978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863196975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8986af520373944b232dfb511951fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlocked: 0
 --- !u!1 &1865962075
 GameObject:
   m_ObjectHideFlags: 0
@@ -29240,11 +29254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1342088013815244868, guid: a1c727bc6057afb4fb91ab32e3dcd1e1, type: 3}
       propertyPath: BounceDist.x
-      value: 20
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1342088013815244868, guid: a1c727bc6057afb4fb91ab32e3dcd1e1, type: 3}
       propertyPath: BounceDist.y
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1342088013815244870, guid: a1c727bc6057afb4fb91ab32e3dcd1e1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
