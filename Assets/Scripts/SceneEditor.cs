@@ -10,8 +10,6 @@ public class SceneEditor : MonoBehaviour
     private SceneEnder sceneEnder;
     private int SceneEnderNum;
 
-    private float timer = 0f;
-
     private bool firstLoad;
 
     private void Start()
@@ -34,18 +32,12 @@ public class SceneEditor : MonoBehaviour
     public void fadeOut()
     {
         anim.SetBool("IsFadedOut", true);
-        //timer += Time.deltaTime;
-        //if (timer >= 2f)
-        //{
-        //    fadeIn();
-        //}
         Invoke(nameof(fadeIn), 2f);
     }
 
     public void fadeIn()
     {
         anim.SetBool("IsFadedOut", false);
-        timer = 0;
         NextScene(SceneEnderNum);
     }
 

@@ -62,12 +62,12 @@ public class EnemyKnight : EnemyBaseClass
             else if (spr.flipX == false && !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackLizard"))
             {
                 anim.SetBool("isRunning", true);
-                rb.velocity = new Vector2(speed, 0);
+                rb.velocity = new Vector2(speed, rb.velocity.y);
             }
             else if (spr.flipX == true && !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackLizard"))
             {
                 anim.SetBool("isRunning", true);
-                rb.velocity = new Vector2(-speed, 0);
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
             }
         }
     }
