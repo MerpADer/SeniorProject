@@ -7,41 +7,23 @@ public class SceneEditor : MonoBehaviour
 {
     public Animator anim;
 
-    // private SceneEnder sceneEnder;
-    //private int SceneEnderNum;
-
-    private bool firstLoad;
-
     public List<RoomData> Rooms;
 
     private void Start()
     {
-        firstLoad = true;
         DontDestroyOnLoad(gameObject);
-        // sceneEnder = FindSceneEnder();
-        // SceneEnderNum = sceneEnder.SceneNum;
     }
 
-    private void Update()
+    public void fadeOut()
     {
-        //if (sceneEnder == null && firstLoad)
-        //{
-        //    firstLoad = false;
-        //    fadeOut();
-        //}
+        anim.SetBool("IsFadedOut", true);
+        Invoke(nameof(fadeIn), 2f);
     }
 
-    //public void fadeOut()
-    //{
-    //    anim.SetBool("IsFadedOut", true);
-    //    Invoke(nameof(fadeIn), 2f);
-    //}
-
-    //public void fadeIn()
-    //{
-    //    anim.SetBool("IsFadedOut", false);
-    //    NextScene(SceneEnderNum);
-    //}
+    public void fadeIn()
+    {
+        anim.SetBool("IsFadedOut", false);
+    }
 
     // these 3 methods do stuff when we load a new scene
     void OnEnable()
@@ -58,15 +40,7 @@ public class SceneEditor : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        firstLoad = true;
-        // sceneEnder = FindSceneEnder();
-        // SceneEnderNum = sceneEnder.SceneNum;
-    }
-
-    // finds the text object that once deleted, will end the scene and transport to another scene
-    private SceneEnder FindSceneEnder()
-    {
-        return GameObject.FindObjectOfType<SceneEnder>();
+        
     }
 
     //Scene Manipulation
@@ -80,8 +54,12 @@ public class SceneEditor : MonoBehaviour
         SceneManager.LoadScene(SceneNum);
     }
 
-    public void NextScene(string SceneName)
+    public IEnumerator NextScene(string SceneName)
     {
+        fadeOut();
+
+        yield return new WaitForSeconds(2f);
+
         SceneManager.LoadScene(SceneName);
     }
 

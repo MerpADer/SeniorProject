@@ -27,7 +27,7 @@ public class LevelPicker : MonoBehaviour
             // assign name and destination based on a list of scenes
             RoomData randomRoom = sceneEditor.RandomRoom();
             buttons[i].gameObject.GetComponentInChildren<TMP_Text>().text = randomRoom.nameDisplay;
-            buttons[i].onClick.AddListener(delegate { sceneEditor.NextScene(randomRoom.nameOfScene); } );
+            buttons[i].onClick.AddListener(delegate { StartCoroutine(sceneEditor.NextScene(randomRoom.nameOfScene)); } );
         }
     }
 
