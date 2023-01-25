@@ -2282,8 +2282,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: roomThreshold
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: Rooms.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: BossRoom.nameDisplay
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: BossRoom.nameOfScene
+      value: BeginningCutScene
       objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: Rooms.Array.data[0].nameDisplay

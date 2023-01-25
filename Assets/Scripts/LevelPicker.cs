@@ -28,6 +28,7 @@ public class LevelPicker : MonoBehaviour
             RoomData randomRoom = sceneEditor.RandomRoom();
             buttons[i].gameObject.GetComponentInChildren<TMP_Text>().text = randomRoom.nameDisplay;
             buttons[i].onClick.AddListener(delegate { StartCoroutine(sceneEditor.NextScene(randomRoom.nameOfScene)); } );
+            buttons[i].onClick.AddListener(delegate { sceneEditor.RemoveRoom(randomRoom.nameOfScene); });
         }
     }
 

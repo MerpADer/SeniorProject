@@ -7,7 +7,10 @@ public class SceneEditor : MonoBehaviour
 {
     public Animator anim;
 
+    [Header("Room Stuff")]
     public List<RoomData> Rooms;
+    [SerializeField] int roomThreshold;
+    [SerializeField] RoomData BossRoom;
 
     private void Start()
     {
@@ -38,6 +41,7 @@ public class SceneEditor : MonoBehaviour
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
+    // if I have to do something at the very start a new scene, do it here
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         
@@ -68,9 +72,33 @@ public class SceneEditor : MonoBehaviour
         Application.Quit();
     }
 
+    // returns a random RoomData from list Rooms
     public RoomData RandomRoom()
     {
         return Rooms[Random.Range(0, Rooms.Count)];
+    }
+
+    // removes one RoomData from the list Rooms
+    public void RemoveRoom(string sceneName)
+    {
+        for (int i = 0; i < Rooms.Count; i++)
+        {
+            if (Rooms[i].nameOfScene == sceneName)
+            {
+                Rooms.RemoveAt(i);
+                break;
+            }
+        }
+
+        // if the list reaches a certain threshold,
+        // then the only room in the list will be a boss room
+
+        if (Rooms.Count < roomThreshold)
+        {
+            Rooms.Clear();
+            Rooms.Add(BossRoom);
+        }
+
     }
 
 }
