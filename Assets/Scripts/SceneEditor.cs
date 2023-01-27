@@ -58,6 +58,12 @@ public class SceneEditor : MonoBehaviour
         SceneManager.LoadScene(SceneNum);
     }
 
+    // wrapper function for the NextScene coroutine so I can use it on buttons
+    public void WrapperNextScene(string SceneName)
+    {
+        StartCoroutine(NextScene(SceneName));
+    }
+
     public IEnumerator NextScene(string SceneName)
     {
         fadeOut();
