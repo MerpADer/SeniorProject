@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e691b0d20b48ce44b3b1cfc540d92e5
+guid: 23e17e7c0d6fab444a21f6528486ef26
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,139 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Horse Drawn Carriage_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 682
-        width: 300
-        height: 341
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e9c7fbb56fc992479d2595d029886d3
-      internalID: -2025363610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse Drawn Carriage_1
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 682
-        width: 300
-        height: 341
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fd1c8ded1bf1af4480a02ff6d0134d8
-      internalID: -315286834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse Drawn Carriage_2
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 682
-        width: 300
-        height: 341
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6764c18e635dfbd498db77785948d927
-      internalID: 139742008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse Drawn Carriage_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 341
-        width: 300
-        height: 341
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae810fbb361885647b003c1439d56b89
-      internalID: -1160233247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse Drawn Carriage_4
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 341
-        width: 300
-        height: 341
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a86df1788006ce047ba8e3c6fbdd2d10
-      internalID: -492467570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse Drawn Carriage_5
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 341
-        width: 300
-        height: 341
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64768543363f3e1439ed82e9b07efd4c
-      internalID: 600004185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse Drawn Carriage_6
+      name: MCPT1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 341
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9922e306bcd618b428e6360d16577eaa
-      internalID: -109661627
+      spriteID: d3ec89e8dfb9a0d498d14ed9f18c5d45
+      internalID: 1554010726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Horse Drawn Carriage_7
+      name: MCPT1_1
       rect:
         serializedVersion: 2
-        x: 300
+        x: 180
         y: 0
-        width: 300
-        height: 341
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +140,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ab5a61b7ea15242875fc28b89153c8
-      internalID: -792034203
+      spriteID: 9302158f2d49c7e4db8655d80c34d8ff
+      internalID: -230004162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCPT1_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7c6c23a31840b41a62e5dc13aeb50d
+      internalID: 1292552280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCPT1_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d72125b6f093b48b7a24c2ecddd7f7
+      internalID: 1237377758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCPT1_4
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e22dbad1509c5428cce54cc3f056e3
+      internalID: 1347158368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCPT1_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a225af3abb98e64a974c24a8bbb5dff
+      internalID: 376931667
       vertices: []
       indices: 
       edges: []
@@ -283,14 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Horse Drawn Carriage_4: -492467570
-      Horse Drawn Carriage_0: -2025363610
-      Horse Drawn Carriage_5: 600004185
-      Horse Drawn Carriage_2: 139742008
-      Horse Drawn Carriage_3: -1160233247
-      Horse Drawn Carriage_1: -315286834
-      Horse Drawn Carriage_7: -792034203
-      Horse Drawn Carriage_6: -109661627
+      MCPT1_1: -230004162
+      MCPT1_3: 1237377758
+      MCPT1_2: 1292552280
+      MCPT1_0: 1554010726
+      MCPT1_5: 376931667
+      MCPT1_4: 1347158368
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
