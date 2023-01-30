@@ -8,7 +8,7 @@ public class LevelPicker : MonoBehaviour
 {
 
     private GameObject player;
-    private SceneEditor sceneEditor;
+    private SceneEditor sceneEditor; // the scene editor contains the list of rooms
 
     [SerializeField] GameObject levelPickCanvas;
 
