@@ -3025,6 +3025,7 @@ GameObject:
   - component: {fileID: 1558880382}
   - component: {fileID: 1558880383}
   - component: {fileID: 1558880384}
+  - component: {fileID: 1558880385}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -3317,6 +3318,26 @@ MonoBehaviour:
   revealedObj: {fileID: 1288320474}
   dist: 0.5
   isRevealed: 0
+--- !u!95 &1558880385
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558880378}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e2d42f2df894544b9c78e1997ee519c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1637731122
 PrefabInstance:
   m_ObjectHideFlags: 0

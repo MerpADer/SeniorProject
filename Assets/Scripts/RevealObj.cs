@@ -5,7 +5,7 @@ using UnityEngine;
 public class RevealObj : MonoBehaviour
 {
 
-    [SerializeField] SpriteRenderer revealedObj;
+    public SpriteRenderer revealedObj;
     [SerializeField] float dist;
 
     private GameObject Player;
