@@ -9,6 +9,7 @@ public class LevelPicker : MonoBehaviour
 
     private GameObject player;
     private SceneEditor sceneEditor; // the scene editor contains the list of rooms
+    private RevealObj revealObj;
 
     [SerializeField] GameObject levelPickCanvas;
 
@@ -22,6 +23,8 @@ public class LevelPicker : MonoBehaviour
 
     private void Start()
     {
+        revealObj = GetComponent<RevealObj>();
+
         for (int i = 0; i < buttons.Count; i++)
         {
             // assign name and destination based on a list of scenes
@@ -32,7 +35,15 @@ public class LevelPicker : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
+    {
+        if (revealObj.isRevealed && Input.GetKeyDown(KeyCode.E))
+        {
+            openOptions();
+        }
+    }
+
+    private void openOptions()
     {
         // freeze player movement
         player.GetComponent<Movement>().enabled = false;
