@@ -42,11 +42,11 @@ public class LevelPicker : MonoBehaviour
     {
         if (revealObj.isRevealed && Input.GetKeyDown(KeyCode.E))
         {
-            openOptions();
+            openChoices();
         }
     }
 
-    private void openOptions()
+    private void openChoices()
     {
         // freeze and hide player
         player.GetComponent<Movement>().enabled = false;

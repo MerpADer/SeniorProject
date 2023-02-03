@@ -12,9 +12,22 @@ public class SceneEditor : MonoBehaviour
     [SerializeField] int roomThreshold;
     [SerializeField] RoomData BossRoom;
 
+    private GameObject optionsMenu;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        // searching children for "OptionsMenu"
+        optionsMenu = gameObject.transform.Find("OptionsMenu").gameObject;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            // either reveals or hides options menu based on what it already was
+            optionsMenu.SetActive(!optionsMenu.activeInHierarchy);
+        }
     }
 
     public void fadeOut()
