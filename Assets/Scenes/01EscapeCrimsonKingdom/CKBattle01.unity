@@ -2533,23 +2533,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
---- !u!1 &998091552 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3834082263300332663, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
-  m_PrefabInstance: {fileID: 1637731122}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &998091558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998091552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a41fe782bd0d409edcea0b33060d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1035311457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3370,14 @@ PrefabInstance:
     - target: {fileID: 2131018478, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: m_Offset.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834082263300332662, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
+      propertyPath: rollKey
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834082263300332662, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
+      propertyPath: attackKey
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 3834082263300332663, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: m_Name

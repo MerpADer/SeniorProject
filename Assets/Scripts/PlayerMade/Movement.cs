@@ -15,6 +15,16 @@ public class Movement : MonoBehaviour
     // will be used to store playerprefs in the future
     public KeyCode leftKey;
     public KeyCode rightKey;
+    public KeyCode attackKey;
+    public KeyCode rollKey;
+
+    enum PlayerState
+    {
+        Normal,
+        Rolling
+    }
+
+    private PlayerState playerState;
 
     void Awake()
     {
@@ -22,11 +32,48 @@ public class Movement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         spr = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
+        playerState = PlayerState.Normal;
     }
 
     void Update()
     {
-        HorizontalMovement();
+        if (playerState == PlayerState.Normal)
+        {
+            HorizontalMovement();
+            Attack();
+            Roll();
+        }
+        else if (playerState == PlayerState.Rolling && rb.velocity.x <= 1)
+        {
+            playerState = PlayerState.Normal;
+            rb.gravityScale = 1;
+        }
+    }
+
+    void Attack()
+    {
+        if (Input.GetKeyDown(attackKey))
+        {
+            anim.SetTrigger("isAttacking");
+            rb.velocity = new Vector2(0, 0);
+        }
+    }
+
+    void Roll()
+    {
+        if (Input.GetKeyDown(rollKey))
+        {
+            anim.SetTrigger("isRolling");
+            rb.velocity = new Vector2(0, 0);
+            playerState = PlayerState.Rolling;
+            RollMove();
+        }
+    }
+
+    void RollMove()
+    {
+        rb.velocity = new Vector2(4, 0);
+        rb.gravityScale = 10;
     }
 
     void HorizontalMovement()
