@@ -46,7 +46,6 @@ public class Movement : MonoBehaviour
         else if (playerState == PlayerState.Rolling && rb.velocity.x <= 1)
         {
             playerState = PlayerState.Normal;
-            rb.gravityScale = 1;
         }
     }
 
@@ -64,16 +63,15 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(rollKey))
         {
             anim.SetTrigger("isRolling");
-            rb.velocity = new Vector2(0, 0);
             playerState = PlayerState.Rolling;
-            RollMove();
+            rb.velocity = new Vector2(7, 0);
+            Invoke(nameof(StopVel), 0.22f);
         }
     }
 
-    void RollMove()
+    void StopVel()
     {
-        rb.velocity = new Vector2(4, 0);
-        rb.gravityScale = 10;
+        rb.velocity = new Vector2(0, 0);
     }
 
     void HorizontalMovement()
