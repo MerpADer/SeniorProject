@@ -32,6 +32,7 @@ public class Movement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         spr = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
+        // Set player state
         playerState = PlayerState.Normal;
     }
 
@@ -47,7 +48,7 @@ public class Movement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(attackKey))
+        if (Input.GetKeyDown(attackKey) && !anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack"))
         {
             anim.SetTrigger("isAttacking");
             rb.velocity = new Vector2(0, 0);
@@ -56,15 +57,19 @@ public class Movement : MonoBehaviour
 
     void Roll()
     {
+        // checks to see if the roll key is pressed an it isn't in the middle of a roll
         if (Input.GetKeyDown(rollKey) && !anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerRoll"))
         {
+            // set the player status to rolling
             anim.SetTrigger("isRolling");
             playerState = PlayerState.Rolling;
-            rb.velocity = new Vector2(5.5f * playerDir(), 0);
+            // move the player
+            rb.velocity = new Vector2(5.5f * playerDir(), rb.velocity.y);
             Invoke(nameof(StopRoll), 0.22f);
         }
     }
 
+    // gets the players direction and returns -1 or 1 to multiply to a movement
     int playerDir()
     {
         int dir = 0;
