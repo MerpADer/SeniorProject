@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour
 
     void Roll()
     {
-        if (Input.GetKeyDown(rollKey))
+        if (Input.GetKeyDown(rollKey) && !anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerRoll"))
         {
             anim.SetTrigger("isRolling");
             playerState = PlayerState.Rolling;
