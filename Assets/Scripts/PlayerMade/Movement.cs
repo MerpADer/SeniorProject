@@ -43,10 +43,6 @@ public class Movement : MonoBehaviour
             Attack();
             Roll();
         }
-        else if (playerState == PlayerState.Rolling && rb.velocity.x <= 1)
-        {
-            playerState = PlayerState.Normal;
-        }
     }
 
     void Attack()
@@ -64,14 +60,27 @@ public class Movement : MonoBehaviour
         {
             anim.SetTrigger("isRolling");
             playerState = PlayerState.Rolling;
-            rb.velocity = new Vector2(7, 0);
-            Invoke(nameof(StopVel), 0.22f);
+            rb.velocity = new Vector2(5.5f * playerDir(), 0);
+            Invoke(nameof(StopRoll), 0.22f);
         }
     }
 
-    void StopVel()
+    int playerDir()
+    {
+        int dir = 0;
+
+        if (spr.flipX)
+            dir = -1;
+        else if (!spr.flipX)
+            dir = 1;
+
+        return dir;
+    }
+
+    void StopRoll()
     {
         rb.velocity = new Vector2(0, 0);
+        playerState = PlayerState.Normal;
     }
 
     void HorizontalMovement()
