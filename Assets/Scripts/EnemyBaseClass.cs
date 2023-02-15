@@ -9,25 +9,28 @@ public class EnemyBaseClass : MonoBehaviour
 
     [Header("Material stuff")]
     [HideInInspector] public SpriteRenderer spr;
+    [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Material defaultMat;
+    [HideInInspector] public Animator anim;
     public Material FlashWhite;
 
     [Header("Basic variables")]
     public int hp;
     public int armor;
     public float speed;
-    public float TurnTime;
 
-    [Header("How much enemy bounces off")]
-    [SerializeField] Vector2 BounceDist;
-    [HideInInspector] public Rigidbody2D rb;
+    private void Awake()
+    {
+        // set all base variables
+        rb = GetComponent<Rigidbody2D>();
+        spr = GetComponentInChildren<SpriteRenderer>();
+        defaultMat = spr.material;
+        anim = GetComponent<Animator>();
+        Player = FindObjectOfType<Movement>().gameObject;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("PlayerParry")) // && isFacingObject(collision.gameObject, gameObject)
-        {
-            BounceOff();
-        }
         if (collision.CompareTag("PlayerDamage"))
         {
             ThisFlashWhite(collision.gameObject);
@@ -79,11 +82,6 @@ public class EnemyBaseClass : MonoBehaviour
     void ResetMat()
     {
         spr.material = defaultMat;
-    }
-
-    private void BounceOff()
-    {
-        rb.velocity += BounceDist;
     }
 
 }

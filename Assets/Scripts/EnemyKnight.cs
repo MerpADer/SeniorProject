@@ -9,9 +9,9 @@ public class EnemyKnight : EnemyBaseClass
 
     private bool isLockedOn = false;
 
-    private Animator anim;
-
     private double AttackTimer = 0f;
+
+    private int TurnTime;
 
     void Awake()
     {

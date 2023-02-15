@@ -72,14 +72,9 @@ public class Movement : MonoBehaviour
     // gets the players direction and returns -1 or 1 to multiply to a movement
     int playerDir()
     {
-        int dir = 0;
-
         if (spr.flipX)
-            dir = -1;
-        else if (!spr.flipX)
-            dir = 1;
-
-        return dir;
+            return -1;
+        return 1;
     }
 
     void StopRoll()
