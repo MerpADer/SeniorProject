@@ -3124,6 +3124,7 @@ GameObject:
   - component: {fileID: 1511377637}
   - component: {fileID: 1511377636}
   - component: {fileID: 1511377635}
+  - component: {fileID: 1511377640}
   m_Layer: 8
   m_Name: SlimeEnemy
   m_TagString: Untagged
@@ -3275,7 +3276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511377634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.577, y: 3.012, z: 0}
+  m_LocalPosition: {x: -18.527, y: 3.012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3283,6 +3284,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1511377640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511377634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f6a3f403e2d4e47b0959cc3fe29fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  spr: {fileID: 0}
+  rb: {fileID: 0}
+  defaultMat: {fileID: 0}
+  anim: {fileID: 0}
+  FlashWhite: {fileID: 0}
+  hp: 3
+  armor: 3
+  speed: 3
+  timeToJump: 3
 --- !u!1 &1558880378
 GameObject:
   m_ObjectHideFlags: 0
