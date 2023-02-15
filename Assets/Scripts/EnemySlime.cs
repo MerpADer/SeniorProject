@@ -7,11 +7,14 @@ public class EnemySlime : EnemyBaseClass
 
     [Header("Slime vars")]
     [SerializeField] float timeToJump;
+
     private float timer;
+    private int dir;
 
     void Start()
     {
         timer = timeToJump;
+        dir = -1;
     }
 
 
@@ -24,7 +27,9 @@ public class EnemySlime : EnemyBaseClass
             timer = timeToJump;
             StartCoroutine(nameof(JumpSeq));
         }
-        
+
+        changeDir();
+
     }
 
     IEnumerator JumpSeq()
@@ -33,7 +38,16 @@ public class EnemySlime : EnemyBaseClass
 
         yield return new WaitForSeconds(0.2f);
 
-        rb.velocity += new Vector2(1, 2);
+        rb.velocity += new Vector2(1 * dir, 2);
+    }
+
+    void changeDir() 
+    {
+        if (isFacingObject(gameObject, Player))
+        {
+            spr.flipX = !spr.flipX;
+            dir *= -1;
+        }
     }
 
 }

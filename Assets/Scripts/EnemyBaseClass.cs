@@ -41,12 +41,12 @@ public class EnemyBaseClass : MonoBehaviour
     public bool isFacingObject(GameObject obj1, GameObject obj2)
     {
         // if obj1 is to the left of the obj2 and the sprite is not flipped, it is facing the obj2
-        if (obj1.transform.position.x < obj2.transform.position.x && obj1.GetComponent<SpriteRenderer>().flipX == false)
+        if (obj1.transform.position.x < obj2.transform.position.x && obj1.GetComponentInChildren<SpriteRenderer>().flipX == false)
         {
             return true;
         }
         // reciprocal
-        else if (obj1.transform.position.x > obj2.transform.position.x && obj1.GetComponent<SpriteRenderer>().flipX == true)
+        else if (obj1.transform.position.x > obj2.transform.position.x && obj1.GetComponentInChildren<SpriteRenderer>().flipX == true)
         {
             return true;
         }
