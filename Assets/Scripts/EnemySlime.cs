@@ -30,6 +30,19 @@ public class EnemySlime : EnemyBaseClass
 
         changeDir();
 
+        if (rb.velocity.y > 0)
+        {
+            anim.SetInteger("VelocityY", 1);
+        }
+        else if (rb.velocity.y < 0)
+        {
+            anim.SetInteger("VelocityY", -1);
+        }
+        else
+        {
+            anim.SetInteger("VelocityY", 0);
+        }
+
     }
 
     IEnumerator JumpSeq()
@@ -38,7 +51,7 @@ public class EnemySlime : EnemyBaseClass
 
         yield return new WaitForSeconds(0.2f);
 
-        rb.velocity += new Vector2(1 * dir, 2);
+        rb.velocity += new Vector2(1.5f * dir, 3);
     }
 
     void changeDir() 
