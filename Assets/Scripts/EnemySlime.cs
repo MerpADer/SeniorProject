@@ -47,9 +47,9 @@ public class EnemySlime : EnemyBaseClass
 
     IEnumerator JumpSeq()
     {
-        anim.SetTrigger("Jump");
 
-        yield return new WaitForSeconds(0.2f);
+        anim.SetTrigger("Jump");
+        yield return new WaitForSeconds(0.4f);
 
         rb.velocity += new Vector2(1.5f * dir, 3);
     }
