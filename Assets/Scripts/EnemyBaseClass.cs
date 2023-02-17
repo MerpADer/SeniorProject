@@ -16,7 +16,6 @@ public class EnemyBaseClass : MonoBehaviour
 
     [Header("Basic variables")]
     public int hp;
-    int armor = 0;
     public float speed;
 
     private void Awake()
@@ -27,6 +26,8 @@ public class EnemyBaseClass : MonoBehaviour
         defaultMat = spr.material;
         anim = GetComponent<Animator>();
         Player = FindObjectOfType<Movement>().gameObject;
+
+        GetComponentInChildren<HealthBar>().SetMaxHealth(hp);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +35,7 @@ public class EnemyBaseClass : MonoBehaviour
         if (collision.CompareTag("PlayerDamage"))
         {
             ThisFlashWhite(collision.gameObject);
+
             GetComponentInChildren<HealthBar>().SetHealth(hp);
         }
     }
@@ -64,11 +66,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     void ThisFlashWhite(GameObject obj)
     {
-        // chooses which health value to hit when player deals damage
-        if (armor <= 0 || !isFacingObject(gameObject, Player))
-            hp -= obj.GetComponent<AttackStats>().AttackDmg;
-        else
-            armor -= obj.GetComponent<AttackStats>().AttackDmg;
+        hp -= obj.GetComponent<AttackStats>().AttackDmg;
 
         // enemy flashes white to signify damage being dealt
         spr.material = FlashWhite;
