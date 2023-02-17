@@ -6,26 +6,23 @@ public class Health : MonoBehaviour
 {
 
     [SerializeField] int hp;
-    [SerializeField] int armor;
 
     [SerializeField] HealthBar healthBar;
 
     private SpriteRenderer spr;
-    private Blocking parry;
 
     private void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
-        healthBar.SetMaxHealth(hp, armor);
-        parry = GetComponentInChildren<Blocking>();
+        healthBar.SetMaxHealth(hp);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemyDamage") && !parry.isBlocked)
+        if (collision.CompareTag("EnemyDamage"))
         {
             hp -= collision.GetComponent<AttackStats>().AttackDmg;
-            healthBar.SetHealth(hp, armor);
+            healthBar.SetHealth(hp);
         }
     }
 

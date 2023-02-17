@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     // the whiteSlider starting value when WhiteHealthDecay starts
     private float redStartingWhiteValue;
 
-    public void SetMaxHealth(int health, int armor)
+    public void SetMaxHealth(int health)
     {
         redSlider.maxValue = health;
         redSlider.value = health;

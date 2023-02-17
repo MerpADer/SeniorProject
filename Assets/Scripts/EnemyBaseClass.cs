@@ -16,7 +16,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     [Header("Basic variables")]
     public int hp;
-    public int armor;
+    int armor = 0;
     public float speed;
 
     private void Awake()
@@ -34,7 +34,7 @@ public class EnemyBaseClass : MonoBehaviour
         if (collision.CompareTag("PlayerDamage"))
         {
             ThisFlashWhite(collision.gameObject);
-            GetComponentInChildren<HealthBar>().SetHealth(hp, armor);
+            GetComponentInChildren<HealthBar>().SetHealth(hp);
         }
     }
 
