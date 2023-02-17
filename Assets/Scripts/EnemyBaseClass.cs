@@ -71,10 +71,7 @@ public class EnemyBaseClass : MonoBehaviour
         // enemy flashes white to signify damage being dealt
         spr.material = FlashWhite;
 
-        if (hp <= 0)
-            Destroy(gameObject);
-        else
-            Invoke(nameof(ResetMat), 0.1f);
+        Invoke(nameof(ResetMat), 0.1f);
     }
 
     void ResetMat()
