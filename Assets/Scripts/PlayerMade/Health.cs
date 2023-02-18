@@ -9,17 +9,17 @@ public class Health : MonoBehaviour
 
     [SerializeField] HealthBar healthBar;
 
-    private SpriteRenderer spr;
+    private Animator anim;
 
     private void Awake()
     {
-        spr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         healthBar.SetMaxHealth(hp);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemyDamage"))
+        if (collision.CompareTag("EnemyDamage") && !anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerRoll"))
         {
             hp -= collision.GetComponent<AttackStats>().AttackDmg;
             healthBar.SetHealth(hp);
