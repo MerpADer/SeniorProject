@@ -6,12 +6,14 @@ public class EnemyBaseClass : MonoBehaviour
 {
 
     [HideInInspector] public GameObject Player;
+    [HideInInspector] public GameObject dmgBox;
 
-    [Header("Material stuff")]
     [HideInInspector] public SpriteRenderer spr;
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Material defaultMat;
     [HideInInspector] public Animator anim;
+
+    [Header("Material stuff")]
     public Material FlashWhite;
 
     [Header("Basic variables")]
@@ -26,6 +28,7 @@ public class EnemyBaseClass : MonoBehaviour
         defaultMat = spr.material;
         anim = GetComponent<Animator>();
         Player = FindObjectOfType<Movement>().gameObject;
+        dmgBox = GetComponentInChildren<AttackStats>().gameObject;
 
         GetComponentInChildren<HealthBar>().SetMaxHealth(hp);
     }

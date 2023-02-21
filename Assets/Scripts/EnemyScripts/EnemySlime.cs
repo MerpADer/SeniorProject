@@ -12,13 +12,10 @@ public class EnemySlime : EnemyBaseClass
     private float timer;
     private int dir;
 
-    private GameObject dmgBox;
-
     void Start()
     {
         timer = timeToJump;
         dir = -1;
-        dmgBox = GetComponentInChildren<AttackStats>().gameObject;
     }
 
 

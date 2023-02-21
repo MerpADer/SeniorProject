@@ -19,7 +19,10 @@ public class EnemyKnight : EnemyBaseClass
             anim.SetBool("isAttacking", false);
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
             {
-                dir *= ChangeDir();
+                int dirMult = ChangeDir();
+
+                dir *= dirMult;
+                dmgBox.transform.localScale = new Vector2(dmgBox.transform.localScale.x * dirMult, 1);
                 Move();
             }
         }
@@ -35,8 +38,4 @@ public class EnemyKnight : EnemyBaseClass
         rb.velocity = new Vector2(speed * dir, 0);
     }
 
-    private void AttackPlayer()
-    {
-        anim.SetTrigger("isAttacking");
-    }
 }
