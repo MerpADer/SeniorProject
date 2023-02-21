@@ -55,6 +55,7 @@ public class EnemyBaseClass : MonoBehaviour
         return false;
     }
 
+    // returns true if player is within distance of enemy
     public bool playerIsDetected(float distance)
     {
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < distance)
@@ -64,6 +65,18 @@ public class EnemyBaseClass : MonoBehaviour
         return false;
     }
 
+    // changes direction enemy is facing when not facing player
+    public int ChangeDir()
+    {
+        if (isFacingObject(gameObject, Player))
+        {
+            spr.flipX = !spr.flipX;
+            return -1;
+        }
+        return 1;
+    }
+
+    // these two methods do the enemy taking damage
     void ThisFlashWhite(GameObject obj)
     {
         hp -= obj.GetComponent<AttackStats>().AttackDmg;

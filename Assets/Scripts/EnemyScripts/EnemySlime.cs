@@ -12,10 +12,13 @@ public class EnemySlime : EnemyBaseClass
     private float timer;
     private int dir;
 
+    private GameObject dmgBox;
+
     void Start()
     {
         timer = timeToJump;
         dir = -1;
+        dmgBox = GetComponentInChildren<AttackStats>().gameObject;
     }
 
 
@@ -29,7 +32,11 @@ public class EnemySlime : EnemyBaseClass
             StartCoroutine(nameof(JumpSeq));
         }
 
-        ChangeDir();
+        // doesn't change direction right before jump
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("SlimeJump"))
+        {
+            dir *= ChangeDir();
+        }
 
         DeathConditions();
 
@@ -58,28 +65,18 @@ public class EnemySlime : EnemyBaseClass
         rb.velocity += new Vector2(1.5f * dir, 3);
     }
 
-    // changes direction slime is facing when not facing player
-    void ChangeDir() 
-    {
-        if (isFacingObject(gameObject, Player))
-        {
-            spr.flipX = !spr.flipX;
-            dir *= -1;
-        }
-    }
-
     void DeathConditions()
     {
         // play death anim
         if (hp <= 0)
         {
             anim.SetBool("Die", true);
+
+            // hide damage collider
+            Destroy(dmgBox);
         }
 
-        // hide damage collider
-
     }
-
 
     public void DestroySelf()
     {

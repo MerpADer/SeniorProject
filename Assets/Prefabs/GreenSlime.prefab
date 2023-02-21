@@ -463,7 +463,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6063906012044910242}
   - component: {fileID: 6063906012044910253}
-  - component: {fileID: 6063906012044910252}
   m_Layer: 0
   m_Name: SlimeSprite
   m_TagString: Untagged
@@ -538,19 +537,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6063906012044910252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6063906012044910243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd72dacadb6aac44db59a1bc16d3ce4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackDmg: 1
 --- !u!1 &6063906012106989016
 GameObject:
   m_ObjectHideFlags: 0
