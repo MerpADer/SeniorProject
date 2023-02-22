@@ -62,22 +62,4 @@ public class EnemySlime : EnemyBaseClass
         rb.velocity += new Vector2(1.5f * dir, 3);
     }
 
-    void DeathConditions()
-    {
-        // play death anim
-        if (hp <= 0)
-        {
-            anim.SetBool("Die", true);
-
-            // hide damage collider
-            Destroy(dmgBox);
-        }
-
-    }
-
-    public void DestroySelf()
-    {
-        Destroy(gameObject);
-    }
-
 }
