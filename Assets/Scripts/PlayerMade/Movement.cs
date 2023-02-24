@@ -8,7 +8,6 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spr;
     private Animator anim;
-    private AudioSource audioSource;
 
     // used for horizontal movement
     [Header("Stats")]
@@ -21,8 +20,13 @@ public class Movement : MonoBehaviour
     public KeyCode attackKey;
     public KeyCode rollKey;
 
-    //[Header("Audio Clips")]
-    //[SerializeField] AudioClip walk;
+    [Header("Audio Sources")]
+    [SerializeField] AudioSource walk;
+    [SerializeField] AudioSource oneShotSound;
+
+    [Header("Audio Clips")]
+    [SerializeField] AudioClip attack;
+    [SerializeField] AudioClip roll;
 
     enum PlayerState
     {
@@ -38,7 +42,6 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
         // Set player state
         playerState = PlayerState.Normal;
     }
@@ -58,6 +61,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(attackKey) && !anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack"))
         {
             anim.SetTrigger("isAttacking");
+            oneShotSound.PlayOneShot(roll);
             rb.velocity = new Vector2(0, 0);
         }
     }
@@ -70,6 +74,9 @@ public class Movement : MonoBehaviour
             // set the player status to rolling
             anim.SetTrigger("isRolling");
             playerState = PlayerState.Rolling;
+
+            oneShotSound.PlayOneShot(attack);
+
             // move the player
             rb.velocity = new Vector2(5.5f * playerDir(), rb.velocity.y);
             Invoke(nameof(StopRoll), 0.22f);
@@ -100,7 +107,7 @@ public class Movement : MonoBehaviour
             spr.flipX = true;
             anim.SetBool("isWalking", true);
             GetComponentInChildren<AttackStats>().gameObject.transform.localScale = new Vector2(-1, 1);
-            audioSource.enabled = true;
+            walk.enabled = true;
         }
         if (Input.GetKey(rightKey))
         {
@@ -108,14 +115,14 @@ public class Movement : MonoBehaviour
             spr.flipX = false;
             anim.SetBool("isWalking", true);
             GetComponentInChildren<AttackStats>().gameObject.transform.localScale = new Vector2(1, 1);
-            audioSource.enabled = true;
+            walk.enabled = true;
         }
         // when they let go of both keys it sets x vel to 0 and turns off animation
         if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
             anim.SetBool("isWalking", false);
-            audioSource.enabled = false;
+            walk.enabled = false;
         }
     }
 
