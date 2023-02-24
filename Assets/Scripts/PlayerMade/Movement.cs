@@ -8,15 +8,21 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spr;
     private Animator anim;
+    private AudioSource audioSource;
 
     // used for horizontal movement
+    [Header("Stats")]
     [SerializeField] float speed;
 
     // will be used to store playerprefs in the future
+    [Header("Keys")]
     public KeyCode leftKey;
     public KeyCode rightKey;
     public KeyCode attackKey;
     public KeyCode rollKey;
+
+    //[Header("Audio Clips")]
+    //[SerializeField] AudioClip walk;
 
     enum PlayerState
     {
@@ -29,9 +35,10 @@ public class Movement : MonoBehaviour
     void Awake()
     {
         // Assign components
-        rb = gameObject.GetComponent<Rigidbody2D>();
-        spr = gameObject.GetComponent<SpriteRenderer>();
-        anim = gameObject.GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        spr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         // Set player state
         playerState = PlayerState.Normal;
     }
@@ -93,6 +100,7 @@ public class Movement : MonoBehaviour
             spr.flipX = true;
             anim.SetBool("isWalking", true);
             GetComponentInChildren<AttackStats>().gameObject.transform.localScale = new Vector2(-1, 1);
+            audioSource.enabled = true;
         }
         if (Input.GetKey(rightKey))
         {
@@ -100,12 +108,14 @@ public class Movement : MonoBehaviour
             spr.flipX = false;
             anim.SetBool("isWalking", true);
             GetComponentInChildren<AttackStats>().gameObject.transform.localScale = new Vector2(1, 1);
+            audioSource.enabled = true;
         }
         // when they let go of both keys it sets x vel to 0 and turns off animation
         if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
             anim.SetBool("isWalking", false);
+            audioSource.enabled = false;
         }
     }
 
