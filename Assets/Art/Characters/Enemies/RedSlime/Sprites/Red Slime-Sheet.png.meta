@@ -556,7 +556,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Red Slime-Sheet_17: -133769528
+      Red Slime-Sheet_18: 1734286328
       Red Slime-Sheet_11: 880987041
       Red Slime-Sheet_16: 1809043316
       Red Slime-Sheet_5: 1880463751
@@ -574,9 +574,9 @@ TextureImporter:
       Red Slime-Sheet_14: 1334347773
       Red Slime-Sheet_19: 552934572
       Red Slime-Sheet_2: 73415824
-      Red Slime-Sheet_18: 1734286328
-      Red Slime-Sheet_7: 1032182110
+      Red Slime-Sheet_17: -133769528
       Red Slime-Sheet_1: -974026710
+      Red Slime-Sheet_7: 1032182110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
