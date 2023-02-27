@@ -14,7 +14,7 @@ public class EnemySlime : EnemyBaseClass
 
     void Start()
     {
-        timer = timeToJump;
+        timer = timeToJump + Random.Range(0, 0.5f);
         dir = -1;
     }
 
@@ -25,7 +25,7 @@ public class EnemySlime : EnemyBaseClass
 
         if (timer <= 0 && !anim.GetBool("Die"))
         {
-            timer = timeToJump;
+            timer = timeToJump + Random.Range(0, 0.5f);
             StartCoroutine(nameof(JumpSeq));
         }
 

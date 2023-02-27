@@ -12,9 +12,4 @@ public class CanvasFunctions : MonoBehaviour
         audioSource.PlayOneShot(sound);
     }
 
-    public void ZTest(RectTransform rectTransform, int x, int y)
-    {
-        rectTransform.position = new Vector2(rectTransform.position.x + x, rectTransform.position.y + y);
-    }
-
 }
