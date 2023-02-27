@@ -21,9 +21,9 @@ public class ParallaxAuto : MonoBehaviour
     {
         timeElapsed += Time.deltaTime;
 
-        transform.position = new Vector2(startpos + timeElapsed * 2, transform.position.y);
+        transform.position = new Vector2(startpos + timeElapsed * parallexEffect, transform.position.y);
 
-        if (transform.position.x > length)
+        if (Mathf.Abs(transform.position.x) > length)
         {
             timeElapsed = 0;
             transform.position = new Vector2(startpos, transform.position.y);
