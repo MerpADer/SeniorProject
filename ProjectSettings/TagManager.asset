@@ -9,6 +9,7 @@ TagManager:
   - EnemyDamage
   - PlayerParry
   - Shredder
+  - Money
   layers:
   - Default
   - TransparentFX

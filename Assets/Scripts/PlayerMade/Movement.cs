@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Movement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Movement : MonoBehaviour
     // used for horizontal movement
     [Header("Stats")]
     [SerializeField] float speed;
+    private int money;
 
     // will be used to store playerprefs in the future
     [Header("Keys")]
@@ -27,6 +29,9 @@ public class Movement : MonoBehaviour
     [Header("Audio Clips")]
     [SerializeField] AudioClip attack;
     [SerializeField] AudioClip roll;
+
+    [Header("UI")]
+    [SerializeField] TMP_Text moneyText;
 
     enum PlayerState
     {
@@ -126,6 +131,15 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Money")
+        {
+            money += collision.gameObject.GetComponent<Money>().value;
+            Destroy(collision.gameObject);
+            moneyText.text = money.ToString();
+        }
+    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -139,6 +153,7 @@ public class Movement : MonoBehaviour
         {
             rb.gravityScale = 1;
         }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

@@ -20,6 +20,9 @@ public class EnemyBaseClass : MonoBehaviour
     public int hp;
     public float speed;
 
+    [Header("Money")]
+    [SerializeField] List<GameObject> dropList;
+
     private void Awake()
     {
         // set all base variables
@@ -110,7 +113,16 @@ public class EnemyBaseClass : MonoBehaviour
 
     public void DestroySelf()
     {
+        DropMoney(5);
         Destroy(gameObject);
+    }
+
+    void DropMoney(int amt)
+    {
+        for (int i = 0; i < amt; i++)
+        {
+            Instantiate(dropList[Random.Range(0, dropList.Count)], transform.position, Quaternion.identity);
+        }
     }
 
 }

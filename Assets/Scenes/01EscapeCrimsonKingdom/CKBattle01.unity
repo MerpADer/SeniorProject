@@ -3883,8 +3883,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyOptions:
   - {fileID: 6063906012354817543, guid: 82e4c0d1665180246a86c5bed8b10c99, type: 3}
-  - {fileID: 7295268061675431276, guid: 233bf78849b873a42a0c19ecfe39681a, type: 3}
-  - {fileID: 3640927093474625215, guid: 0aa2424dc55a0da409437fa35a23689d, type: 3}
 --- !u!4 &473471725
 Transform:
   m_ObjectHideFlags: 0
@@ -4453,6 +4451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6959461369712307211, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438164, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -5424,7 +5426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1339543109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6452,7 +6454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1595503806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6624,6 +6626,10 @@ PrefabInstance:
       propertyPath: attackKey
       value: 107
       objectReference: {fileID: 0}
+    - target: {fileID: 3834082263300332662, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
+      propertyPath: moneyText
+      value: 
+      objectReference: {fileID: 8685829}
     - target: {fileID: 3834082263300332662, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: oneShotSound
       value: 
