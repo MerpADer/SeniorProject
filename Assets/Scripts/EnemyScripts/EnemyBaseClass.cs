@@ -22,6 +22,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     [Header("Money")]
     [SerializeField] List<GameObject> dropList;
+    [SerializeField] int amtDropped;
 
     private void Awake()
     {
@@ -113,7 +114,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     public void DestroySelf()
     {
-        DropMoney(5);
+        DropMoney(amtDropped - Random.Range(0, 2));
         Destroy(gameObject);
     }
 

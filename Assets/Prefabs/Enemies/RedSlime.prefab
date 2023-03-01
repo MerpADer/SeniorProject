@@ -916,4 +916,8 @@ MonoBehaviour:
   FlashWhite: {fileID: 2100000, guid: 122ea7ad4a6ab4347a4d6f78af5a0dcc, type: 2}
   hp: 4
   speed: 3
+  dropList:
+  - {fileID: 8846818047283672470, guid: 3a8f193e2b3b05b46975b4649dc483c5, type: 3}
+  - {fileID: 859539562618185676, guid: 99bb813504167204989f3b4adc084a41, type: 3}
+  amtDropped: 5
   timeToJump: 1.75

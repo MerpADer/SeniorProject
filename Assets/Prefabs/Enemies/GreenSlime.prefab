@@ -918,6 +918,5 @@ MonoBehaviour:
   speed: 3
   dropList:
   - {fileID: 8846818047283672470, guid: 3a8f193e2b3b05b46975b4649dc483c5, type: 3}
-  - {fileID: 8600101479392621915, guid: dc3e6fb0cfd2d254ab4e3bca2d0d694c, type: 3}
-  - {fileID: 859539562618185676, guid: 99bb813504167204989f3b4adc084a41, type: 3}
+  amtDropped: 5
   timeToJump: 3
