@@ -20,15 +20,22 @@ public class RevealObj : MonoBehaviour
 
     void Update()
     {
-        if (Mathf.Abs(Player.transform.position.x - transform.position.x) < dist)
+        if (revealedObj == null)
         {
-            isRevealed = true;
-            revealedObj.enabled = true;
+            Destroy(this);
         }
         else
         {
-            isRevealed = false;
-            revealedObj.enabled = false;
+            if (Mathf.Abs(Player.transform.position.x - transform.position.x) < dist)
+            {
+                isRevealed = true;
+                revealedObj.enabled = true;
+            }
+            else
+            {
+                isRevealed = false;
+                revealedObj.enabled = false;
+            }
         }
     }
 
