@@ -10,6 +10,7 @@ TagManager:
   - PlayerParry
   - Shredder
   - Money
+  - ItemImage
   layers:
   - Default
   - TransparentFX
