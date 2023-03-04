@@ -25,6 +25,7 @@ public class Shop : MonoBehaviour
         public int min;
         public int max;
         private int value;
+        public int price;
 
         public TypeOfItem typeOfItem;
 
@@ -34,6 +35,7 @@ public class Shop : MonoBehaviour
         public void SetValue()
         {
             value = Random.Range(min, max + 1);
+            price += value;
         }
 
         public void SetDesc()
@@ -55,8 +57,24 @@ public class Shop : MonoBehaviour
 
     }
 
+    [System.Serializable]
+    public struct ItemSlot 
+    {
+        public TMP_Text descTxt;
+        public TMP_Text priceTxt;
+        public Image itemImage;
+
+        [HideInInspector] public int price;
+
+        public int CalculatePrice(int value)
+        {
+            return value * 2 + Random.Range(0, 2);
+        }
+
+    }
+
     public List<ItemStats> items;
-    public List<GameObject> itemSlots;
+    public List<ItemSlot> itemSlots;
 
     void Awake()
     {
@@ -71,15 +89,9 @@ public class Shop : MonoBehaviour
             selectedItem.SetValue();
             selectedItem.SetDesc();
             // now set all these values to ui on screen
-            foreach (Transform tr in itemSlots[i].transform)
-            {
-                if (tr.CompareTag("ItemImage"))
-                {
-                    print(tr);
-                    tr.gameObject.GetComponent<Image>().sprite = selectedItem.itemImg;
-                }
-            }
-            itemSlots[i].GetComponentInChildren<TMP_Text>().text = selectedItem.itemDesc;
+            itemSlots[i].itemImage.sprite = selectedItem.itemImg;
+            itemSlots[i].descTxt.text = selectedItem.itemDesc;
+            itemSlots[i].priceTxt.text = itemSlots[i].CalculatePrice(selectedItem.GetValue()).ToString();
         }
 
     }
