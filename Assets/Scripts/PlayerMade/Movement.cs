@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
     [Header("Audio Clips")]
     [SerializeField] AudioClip attack;
     [SerializeField] AudioClip roll;
+    [SerializeField] AudioClip collectMoney;
 
     [Header("UI")]
     public TMP_Text moneyText;
@@ -136,6 +137,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Money")
         {
             money += collision.gameObject.GetComponent<Money>().value;
+            oneShotSound.PlayOneShot(collectMoney);
             Destroy(collision.gameObject);
             moneyText.text = money.ToString();
         }

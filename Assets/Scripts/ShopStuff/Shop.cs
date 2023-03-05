@@ -12,6 +12,11 @@ public class Shop : MonoBehaviour
 
     public GameObject shopMenu;
 
+    [Header("Button Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip canBuy;
+    [SerializeField] AudioClip cannotBuy;
+
     // item stuff
     public enum TypeOfItem
     {
@@ -94,7 +99,7 @@ public class Shop : MonoBehaviour
             return (value * 2 + Random.Range(0, 2)); 
         }
 
-        public void PurchaseItem(ItemStats selectedItem)
+        public void PurchaseItem(ItemStats selectedItem, AudioSource audio, AudioClip canBuy, AudioClip cannotBuy)
         {
             playerObj = FindObjectOfType<Movement>();
 
@@ -103,11 +108,14 @@ public class Shop : MonoBehaviour
                 playerObj.money -= price;
                 playerObj.moneyText.text = playerObj.money.ToString();
                 selectedItem.UseItem();
+                audio.PlayOneShot(canBuy);
                 Destroy(button.gameObject);
             }
-            
+            else
+            {
+                audio.PlayOneShot(cannotBuy);
+            }
         }
-
     }
 
     public List<ItemStats> items;
@@ -138,7 +146,7 @@ public class Shop : MonoBehaviour
             itemSlots[i].priceTxt.text = itemSlots[i].price.ToString();
 
             // finally add onClick events for applying item effects and taking money
-            itemSlots[i].button.onClick.AddListener(delegate { temp.PurchaseItem(selectedItem); });
+            itemSlots[i].button.onClick.AddListener(delegate { temp.PurchaseItem(selectedItem, audioSource, canBuy, cannotBuy); });
         }
 
     }
