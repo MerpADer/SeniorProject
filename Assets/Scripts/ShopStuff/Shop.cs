@@ -25,9 +25,10 @@ public class Shop : MonoBehaviour
         public int min;
         public int max;
         private int value;
-        public int price;
 
         public TypeOfItem typeOfItem;
+
+        private GameObject playerObj;
 
         public Sprite itemImg;
         [HideInInspector] public string itemDesc;
@@ -35,7 +36,6 @@ public class Shop : MonoBehaviour
         public void SetValue()
         {
             value = Random.Range(min, max + 1);
-            price += value;
         }
 
         public void SetDesc()
@@ -46,13 +46,33 @@ public class Shop : MonoBehaviour
             }
             else if (typeOfItem == TypeOfItem.AttackUpgrade)
             {
-                itemDesc = "Deal " + value.ToString() + " damage.";
+                itemDesc = "Deal " + value.ToString() + " more damage.";
             }
         }
 
         public int GetValue()
         {
             return value;
+        }
+
+        public void UseItem()
+        {
+            playerObj = FindObjectOfType<Movement>().gameObject;
+
+            if (typeOfItem == TypeOfItem.Potion)
+            {
+                Health playerHealth = playerObj.GetComponent<Health>();
+                playerHealth.hp += value;
+                if (playerHealth.hp > playerHealth.maxHealth)
+                {
+                    playerHealth.hp = playerHealth.maxHealth;
+                }
+                playerHealth.healthBar.SetHealth(playerHealth.hp);
+            }
+            else if (typeOfItem == TypeOfItem.AttackUpgrade)
+            {
+                playerObj.GetComponentInChildren<AttackStats>().AttackDmg += value;
+            }
         }
 
     }
@@ -63,12 +83,29 @@ public class Shop : MonoBehaviour
         public TMP_Text descTxt;
         public TMP_Text priceTxt;
         public Image itemImage;
+        public Button button;
+
+        private Movement playerObj;
 
         [HideInInspector] public int price;
 
         public int CalculatePrice(int value)
         {
-            return value * 2 + Random.Range(0, 2);
+            return (value * 2 + Random.Range(0, 2)); 
+        }
+
+        public void PurchaseItem(ItemStats selectedItem)
+        {
+            playerObj = FindObjectOfType<Movement>();
+
+            if (playerObj.money >= price)
+            {
+                playerObj.money -= price;
+                playerObj.moneyText.text = playerObj.money.ToString();
+                selectedItem.UseItem();
+                Destroy(button.gameObject);
+            }
+            
         }
 
     }
@@ -88,10 +125,20 @@ public class Shop : MonoBehaviour
             ItemStats selectedItem = items[Random.Range(0, items.Count)];
             selectedItem.SetValue();
             selectedItem.SetDesc();
+
             // now set all these values to ui on screen
             itemSlots[i].itemImage.sprite = selectedItem.itemImg;
             itemSlots[i].descTxt.text = selectedItem.itemDesc;
-            itemSlots[i].priceTxt.text = itemSlots[i].CalculatePrice(selectedItem.GetValue()).ToString();
+
+            ItemSlot temp = itemSlots[i];
+
+            temp.price = itemSlots[i].CalculatePrice(selectedItem.GetValue());
+            itemSlots[i] = temp;
+
+            itemSlots[i].priceTxt.text = itemSlots[i].price.ToString();
+
+            // finally add onClick events for applying item effects and taking money
+            itemSlots[i].button.onClick.AddListener(delegate { temp.PurchaseItem(selectedItem); });
         }
 
     }

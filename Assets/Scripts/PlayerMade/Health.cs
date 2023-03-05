@@ -5,14 +5,16 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
 
-    [SerializeField] int hp;
+    public int hp;
+    [HideInInspector] public int maxHealth;
 
-    [SerializeField] HealthBar healthBar;
+    public HealthBar healthBar;
 
     private Animator anim;
 
     private void Awake()
     {
+        maxHealth = hp;
         anim = GetComponent<Animator>();
         healthBar.SetMaxHealth(hp);
     }

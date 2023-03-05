@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
     // used for horizontal movement
     [Header("Stats")]
     [SerializeField] float speed;
-    private int money;
+    [HideInInspector] public int money;
 
     // will be used to store playerprefs in the future
     [Header("Keys")]
@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     [SerializeField] AudioClip roll;
 
     [Header("UI")]
-    [SerializeField] TMP_Text moneyText;
+    public TMP_Text moneyText;
 
     enum PlayerState
     {
@@ -166,4 +166,15 @@ public class Movement : MonoBehaviour
         }
         rb.gravityScale = 1;
     }
+
+    private void OnEnable()
+    {
+        walk.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        walk.enabled = false;
+    }
+
 }

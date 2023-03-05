@@ -29,12 +29,15 @@ public class HealthBar : MonoBehaviour
         redSlider.value = health;
 
         //runs if hp changed
-        if (startRedSliderVal != redSlider.value)
+        if (startRedSliderVal > redSlider.value)
         {
             redStartingWhiteValue = red_WhiteSlider.value;
             InvokeRepeating(nameof(redWhiteHealthDecay), 0.3f, .01f);
         }
-
+        else if (startRedSliderVal < redSlider.value)
+        {
+            red_WhiteSlider.value = redSlider.value;
+        }
     }
 
     void redWhiteHealthDecay()
