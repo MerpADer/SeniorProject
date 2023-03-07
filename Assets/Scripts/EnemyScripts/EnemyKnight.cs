@@ -30,7 +30,7 @@ public class EnemyKnight : EnemyBaseClass
         {
             anim.SetBool("isAttacking", true);
         }
-
+        DeathConditions();
     }
 
     void Move()
