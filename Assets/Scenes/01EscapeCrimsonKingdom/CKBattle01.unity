@@ -6167,10 +6167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3640927093474625213, guid: 0aa2424dc55a0da409437fa35a23689d, type: 3}
-      propertyPath: m_Size.y
-      value: 0.58
-      objectReference: {fileID: 0}
     - target: {fileID: 3640927093474625215, guid: 0aa2424dc55a0da409437fa35a23689d, type: 3}
       propertyPath: m_Name
       value: Skeleton
