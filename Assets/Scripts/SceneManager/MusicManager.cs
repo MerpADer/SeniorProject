@@ -6,41 +6,67 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
 
-    [SerializeField] List<AudioClip> sceneIndexMusic;
+    [SerializeField] List<MusicItem> sceneIndexMusic;
 
     private AudioClip currentTrack;
     private AudioSource audioSource;
+    private int sceneIndex;
 
     void Awake()
     {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         audioSource = GetComponent<AudioSource>();
 
-        currentTrack = sceneIndexMusic[SceneManager.GetActiveScene().buildIndex];
+        currentTrack = sceneIndexMusic[sceneIndex].mainTrack;
         audioSource.clip = currentTrack;
         audioSource.Play();
+
+        CheckData();
     }
 
-    //// these 3 methods do stuff when we load a new scene
-    //void OnEnable()
-    //{
-    //    //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
-    //    SceneManager.sceneLoaded += OnLevelFinishedLoading;
-    //}
+    void SetNewTrack()
+    {
+        audioSource.clip = sceneIndexMusic[sceneIndex].secondaryTrack;
+        audioSource.Play();
+        audioSource.loop = true;
+    }
 
-    //void OnDisable()
-    //{
-    //    //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
-    //    SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    //}
+    void CheckData()
+    {
+        if (sceneIndexMusic[SceneManager.GetActiveScene().buildIndex].isLooping)
+        {
+            audioSource.loop = true;
+        }
+        else
+        {
+            Invoke(nameof(SetNewTrack), sceneIndexMusic[sceneIndex].mainTrack.length);
+        }
+    }
 
-    //// if I have to do something at the very start a new scene, do it here
-    //void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    //{
-    //    if (sceneIndexMusic[SceneManager.GetActiveScene().buildIndex] != currentTrack)
-    //    {
-    //        currentTrack = sceneIndexMusic[SceneManager.GetActiveScene().buildIndex];
-    //        audioSource.clip = currentTrack;
-    //    }
-    //}
+    // these 3 methods do stuff when we load a new scene
+    void OnEnable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    // if I have to do something at the very start a new scene, do it here
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        if (sceneIndexMusic[SceneManager.GetActiveScene().buildIndex].mainTrack != currentTrack)
+        {
+            currentTrack = sceneIndexMusic[SceneManager.GetActiveScene().buildIndex].mainTrack;
+            audioSource.clip = currentTrack;
+            audioSource.Play();
+            CancelInvoke();
+            CheckData();
+        }
+    }
 
 }

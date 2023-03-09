@@ -2550,7 +2550,7 @@ GameObject:
   - component: {fileID: 6959461370966438166}
   - component: {fileID: 6959461370966438167}
   - component: {fileID: 2325944801180741287}
-  - component: {fileID: 3250402795727376247}
+  - component: {fileID: 3814220466266823858}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -2691,7 +2691,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3250402795727376247
+--- !u!114 &3814220466266823858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2703,7 +2703,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09935b3c5c9cec846990d76e56519c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndexMusic: []
+  sceneIndexMusic:
+  - mainTrack: {fileID: 8300000, guid: 82f38d2872195be488be0028a81c4b16, type: 3}
+    isLooping: 0
+    secondaryTrack: {fileID: 8300000, guid: a803da7fbf431fb4f890d967d49b7e7c, type: 3}
+  - mainTrack: {fileID: 8300000, guid: 90e163166f677e14f9b541ad06a43c6a, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
 --- !u!1 &7105897290610077117
 GameObject:
   m_ObjectHideFlags: 0
