@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
 
     private Animator anim;
 
+    [SerializeField] GameObject deathMenu;
+
     private void Awake()
     {
         maxHealth = hp;
@@ -25,6 +27,10 @@ public class Health : MonoBehaviour
         {
             hp -= collision.GetComponent<AttackStats>().AttackDmg;
             healthBar.SetHealth(hp);
+            if (hp <= 0)
+            {
+                deathMenu.SetActive(true);
+            }
         }
     }
 
