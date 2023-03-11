@@ -27,10 +27,31 @@ public class Health : MonoBehaviour
         {
             hp -= collision.GetComponent<AttackStats>().AttackDmg;
             healthBar.SetHealth(hp);
+
+            // move player back
+            if (collision.transform.position.x > gameObject.transform.position.x)
+            {
+                StartCoroutine(Hurt(-1));
+            }
+            else
+            {
+                StartCoroutine(Hurt(1));
+            }
+
+            // death condition
             if (hp <= 0)
             {
                 deathMenu.SetActive(true);
             }
+        }
+    }
+
+    IEnumerator Hurt(int dir)
+    {
+        for (int i = 0; i < 25; i++)
+        {
+            yield return new WaitForSeconds(0.005f);
+            transform.Translate(new Vector2(0.03f * dir, 0));
         }
     }
 
