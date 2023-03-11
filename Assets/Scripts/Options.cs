@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Options : MonoBehaviour
 {
+    private static int amtOfMenus;
 
     private void OnEnable()
     {
+        amtOfMenus++;
         Time.timeScale = 0;
     }
 
     private void OnDisable()
     {
-        Time.timeScale = 1;
+        amtOfMenus--;
+        if (amtOfMenus == 0)
+        {
+            Time.timeScale = 1;
+        }
     }
 
 }

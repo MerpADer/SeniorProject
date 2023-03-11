@@ -3283,7 +3283,7 @@ RectTransform:
   m_GameObject: {fileID: 184030376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1005646247}
@@ -3292,7 +3292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -245}
+  m_AnchoredPosition: {x: 0, y: -162}
   m_SizeDelta: {x: 220, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184030378
@@ -3386,6 +3386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 216171606}
+  - component: {fileID: 216171607}
   m_Layer: 5
   m_Name: DeathUI
   m_TagString: Untagged
@@ -3417,6 +3418,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &216171607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216171605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f157bc78360024296e81ea9c9d8adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305323069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,7 +3873,7 @@ RectTransform:
   m_GameObject: {fileID: 488302080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 38975276}
@@ -3869,7 +3882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -419}
+  m_AnchoredPosition: {x: 0, y: -403}
   m_SizeDelta: {x: 220, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488302082
@@ -3901,8 +3914,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1049447634, guid: da8eba643b19e8a49b8ed0a5cfa92400, type: 3}
-    m_PressedSprite: {fileID: 2040218253, guid: da8eba643b19e8a49b8ed0a5cfa92400, type: 3}
+    m_HighlightedSprite: {fileID: 760731174, guid: 3bff24832b7e5634e9d0fc2bc8089c67, type: 3}
+    m_PressedSprite: {fileID: -556180917, guid: 3bff24832b7e5634e9d0fc2bc8089c67, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -3936,7 +3949,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1912048184, guid: da8eba643b19e8a49b8ed0a5cfa92400, type: 3}
+  m_Sprite: {fileID: -1065175943, guid: 3bff24832b7e5634e9d0fc2bc8089c67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4014,8 +4027,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Died
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6713e34cb0cf25e4390837f6cd5b61b1, type: 2}
-  m_sharedMaterial: {fileID: 461272765764115940, guid: 6713e34cb0cf25e4390837f6cd5b61b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852cab3a652ddda498f998e47fc107f8, type: 2}
+  m_sharedMaterial: {fileID: 7118136988833138606, guid: 852cab3a652ddda498f998e47fc107f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4039,8 +4052,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5626,7 +5639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0.39215687}
+  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0.64705884}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
