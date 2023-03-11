@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
 
     [Header("Audio Sources")]
     [SerializeField] AudioSource walk;
-    [SerializeField] AudioSource oneShotSound;
+    public AudioSource oneShotSound;
 
     [Header("Audio Clips")]
     [SerializeField] AudioClip attack;

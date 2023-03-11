@@ -463,7 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6063906012044910242}
   - component: {fileID: 6063906012044910253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlimeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   FlashWhite: {fileID: 2100000, guid: 122ea7ad4a6ab4347a4d6f78af5a0dcc, type: 2}
   hp: 3
-  speed: 3
+  speed: 0
   dropList:
   - {fileID: 8846818047283672470, guid: 3a8f193e2b3b05b46975b4649dc483c5, type: 3}
   amtDropped: 5

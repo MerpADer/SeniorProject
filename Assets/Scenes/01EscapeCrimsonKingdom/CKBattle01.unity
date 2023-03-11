@@ -3120,11 +3120,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &216171605 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4778755972281811382, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
-  m_PrefabInstance: {fileID: 1637731122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &305323069
 GameObject:
   m_ObjectHideFlags: 0
@@ -5588,10 +5583,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4778755972281811382, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5624900759402921608, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
-      propertyPath: deathMenu
+      propertyPath: FlashWhite
       value: 
-      objectReference: {fileID: 216171605}
+      objectReference: {fileID: 2100000, guid: c7cbbb91d4124c942a72079574b18f6a, type: 2}
+    - target: {fileID: 5624900759402921608, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 3968
+      objectReference: {fileID: 0}
     - target: {fileID: 7621175535616475243, guid: a54299bf9b1056046a140f48fdfaac57, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -6926,7 +6929,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.065681726, g: 0.07915415, b: 0.33962262, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
