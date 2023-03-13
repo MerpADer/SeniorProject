@@ -16,6 +16,8 @@ public class LevelPicker : MonoBehaviour
 
     [SerializeField] List<Button> buttons;
 
+    [HideInInspector] public List<GameObject> enemies;
+
     void Awake()
     {
         sceneEditor = FindObjectOfType<SceneEditor>();
@@ -40,7 +42,11 @@ public class LevelPicker : MonoBehaviour
 
     private void Update()
     {
-        if (revealObj.isRevealed && Input.GetKeyDown(KeyCode.E))
+        if (enemies.Count > 0 && enemies[0] == null)
+        {
+            enemies.RemoveAt(0);
+        }
+        if (revealObj.isRevealed && Input.GetKeyDown(KeyCode.E) && enemies.Count <= 0)
         {
             openChoices();
         }
