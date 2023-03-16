@@ -59,6 +59,7 @@ public class Health : MonoBehaviour
 
             // flash player red
             ThisFlashRed();
+            CameraShake.Instance.Shake(1, 1, 0.1f);
 
             // move player back
             if (collision.transform.position.x > gameObject.transform.position.x)
