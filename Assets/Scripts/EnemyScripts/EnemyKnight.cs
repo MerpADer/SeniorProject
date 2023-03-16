@@ -53,7 +53,7 @@ public class EnemyKnight : EnemyBaseClass
 
     void Move()
     {
-        rb.velocity = new Vector2(speed * dir, 0);
+        rb.velocity = new Vector2(speed * dir, rb.velocity.y);
     }
 
 }

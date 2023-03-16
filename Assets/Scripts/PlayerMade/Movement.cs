@@ -146,7 +146,7 @@ public class Movement : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         // freezes the player so they don't fall off of a slope object
-        if (!Input.GetKey(leftKey) && !Input.GetKey(rightKey) && collision.gameObject.tag == "Slope")
+        if (playerState != PlayerState.Rolling && !Input.GetKey(leftKey) && !Input.GetKey(rightKey) && collision.gameObject.tag == "Slope")
         {
             rb.velocity = new Vector2(0, 0);
             rb.gravityScale = 0;
@@ -162,7 +162,7 @@ public class Movement : MonoBehaviour
     {
         // when they leave a slope I set the velocity to 0 because otherwise
         // it will fly off
-        if (collision.gameObject.tag == "Slope")
+        if (playerState != PlayerState.Rolling && collision.gameObject.tag == "Slope")
         {
             rb.velocity = new Vector2(0, 0);
         }

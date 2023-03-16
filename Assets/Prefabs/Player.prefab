@@ -1533,11 +1533,11 @@ MonoBehaviour:
   healthBar: {fileID: 1177516399995457019}
   deathMenu: {fileID: 4778755972281811382}
   takeDamage: {fileID: 8300000, guid: 751ba84cd823cc7448ae0978830e3afb, type: 3}
-  playerDeath: {fileID: 0}
-  FlashWhite: {fileID: 0}
+  playerDeath: {fileID: 8300000, guid: e8fb97b29341dbe469569cda3e2536a8, type: 3}
+  FlashWhite: {fileID: 2100000, guid: c7cbbb91d4124c942a72079574b18f6a, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3968
 --- !u!1 &3834082263649754981
 GameObject:
   m_ObjectHideFlags: 0
