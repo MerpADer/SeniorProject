@@ -9,13 +9,22 @@ public class EnemySpawner : MonoBehaviour
 
     private LevelPicker levelPicker;
 
+    private Transform player;
+
     void Start()
     {
         levelPicker = FindObjectOfType<LevelPicker>();
+        player = FindObjectOfType<Movement>().transform;
+    }
 
-        GameObject chosenEnemy = enemyOptions[Random.Range(0, enemyOptions.Count)];
-        levelPicker.enemies.Add(Instantiate(chosenEnemy, gameObject.transform.position, Quaternion.identity));
-        Destroy(gameObject);
+    private void Update()
+    {
+        if (Mathf.Abs(player.position.x - gameObject.transform.position.x) <= 1f)
+        {
+            GameObject chosenEnemy = enemyOptions[Random.Range(0, enemyOptions.Count)];
+            levelPicker.enemies.Add(Instantiate(chosenEnemy, gameObject.transform.position, Quaternion.identity));
+            Destroy(gameObject);
+        }
     }
 
 }
