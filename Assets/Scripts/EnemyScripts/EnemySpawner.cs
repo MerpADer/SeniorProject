@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Mathf.Abs(player.position.x - gameObject.transform.position.x) <= 1f)
+        if (Mathf.Abs(player.position.x - gameObject.transform.position.x) <= 4f)
         {
             GameObject chosenEnemy = enemyOptions[Random.Range(0, enemyOptions.Count)];
             levelPicker.enemies.Add(Instantiate(chosenEnemy, gameObject.transform.position, Quaternion.identity));
