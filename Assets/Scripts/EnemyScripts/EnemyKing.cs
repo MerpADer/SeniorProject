@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyKnight : EnemyBaseClass
+public class EnemyKing : EnemyBaseClass
 {
 
     private int dir;
 
-    private bool flagDeath = false;
+    private float timer;
 
     [SerializeField] float attackRadius;
 
@@ -18,10 +18,12 @@ public class EnemyKnight : EnemyBaseClass
 
     void Update()
     {
+        timer -= Time.deltaTime;
+
         // attacking the player
         if (!playerIsDetected(attackRadius))
         {
-            anim.SetBool("isAttacking", false);
+
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && dmgBox != null)
             {
                 int dirMult = ChangeDir();
@@ -31,25 +33,22 @@ public class EnemyKnight : EnemyBaseClass
                 Move();
             }
         }
-        else
+        else if (timer <= 0)
         {
-            anim.SetBool("isAttacking", true);
-        }
-
-        // shoot skeleton back
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Die") && !flagDeath)
-        {
-            flagDeath = true;
-
-            if (gameObject.transform.position.x > Player.transform.position.x)
+            timer = 10;
+            int temp = Random.Range(1, 3);
+            if (temp == 1)
             {
-                rb.velocity += new Vector2(2, 1.5f);
+                Attack1();
+            }
+            else if (temp == 2)
+            {
+                Attack2();
             }
             else
             {
-                rb.velocity += new Vector2(-2, 1.5f);
+                Attack3();
             }
-
         }
 
         DeathConditions();
@@ -58,6 +57,21 @@ public class EnemyKnight : EnemyBaseClass
     void Move()
     {
         rb.velocity = new Vector2(speed * dir, rb.velocity.y);
+    }
+
+    void Attack1()
+    {
+
+    }
+
+    void Attack2()
+    {
+
+    }
+
+    void Attack3()
+    {
+
     }
 
 }
