@@ -16137,7 +16137,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.35
+  orthographic size: 1.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -22138,32 +22138,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7911453134968203448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911453134968203449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34da8ba3d1708b4f99d58fbc9149003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  dmgBox: {fileID: 0}
-  spr: {fileID: 0}
-  rb: {fileID: 0}
-  defaultMat: {fileID: 0}
-  anim: {fileID: 0}
-  FlashWhite: {fileID: 2100000, guid: 122ea7ad4a6ab4347a4d6f78af5a0dcc, type: 2}
-  hp: 4
-  speed: 0.5
-  dropList:
-  - {fileID: 859539562618185676, guid: 99bb813504167204989f3b4adc084a41, type: 3}
-  - {fileID: 8600101479392621915, guid: dc3e6fb0cfd2d254ab4e3bca2d0d694c, type: 3}
-  amtDropped: 3
-  attackRadius: 0
 --- !u!1 &7911453134968203449
 GameObject:
   m_ObjectHideFlags: 0
@@ -22177,7 +22151,7 @@ GameObject:
   - component: {fileID: 7911453134968203445}
   - component: {fileID: 7911453134968203450}
   - component: {fileID: 7911453134968203451}
-  - component: {fileID: 7911453134968203448}
+  - component: {fileID: 7911453134968203452}
   m_Layer: 8
   m_Name: SkeletonKing
   m_TagString: Untagged
@@ -22280,6 +22254,30 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03, y: -0.03}
   m_Size: {x: 0.2, y: 0.58}
   m_Direction: 0
+--- !u!114 &7911453134968203452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911453134968203449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e331e719bdeb6e641b6bdd85ef733b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  dmgBox: {fileID: 0}
+  spr: {fileID: 0}
+  rb: {fileID: 0}
+  defaultMat: {fileID: 0}
+  anim: {fileID: 0}
+  FlashWhite: {fileID: 2100000, guid: 122ea7ad4a6ab4347a4d6f78af5a0dcc, type: 2}
+  hp: 25
+  speed: 1
+  dropList: []
+  amtDropped: 0
+  attackRadius: 1
 --- !u!212 &7911453135167923013
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class EnemyKing : EnemyBaseClass
         else if (timer <= 0)
         {
             timer = 10;
-            int temp = Random.Range(1, 3);
+            int temp = Random.Range(1, 4);
             if (temp == 1)
             {
                 Attack1();
@@ -49,6 +49,11 @@ public class EnemyKing : EnemyBaseClass
             {
                 Attack3();
             }
+            anim.SetBool("Walking", false);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
         }
 
         DeathConditions();
@@ -56,22 +61,23 @@ public class EnemyKing : EnemyBaseClass
 
     void Move()
     {
+        anim.SetBool("Walking", true);
         rb.velocity = new Vector2(speed * dir, rb.velocity.y);
     }
 
     void Attack1()
     {
-
+        anim.SetTrigger("Attack1");
     }
 
     void Attack2()
     {
-
+        anim.SetTrigger("Attack2");
     }
 
     void Attack3()
     {
-
+        anim.SetTrigger("Attack3");
     }
 
 }
