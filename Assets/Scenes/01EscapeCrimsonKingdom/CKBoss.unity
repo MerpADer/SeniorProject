@@ -22129,7 +22129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911453134968203449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.5, y: 11, z: -0.3026327}
+  m_LocalPosition: {x: -11.48, y: 11, z: -0.3026327}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22251,8 +22251,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.03}
-  m_Size: {x: 0.2, y: 0.58}
+  m_Offset: {x: 0.02, y: -0.07}
+  m_Size: {x: 0.23, y: 0.58}
   m_Direction: 0
 --- !u!114 &7911453134968203452
 MonoBehaviour:
@@ -22277,7 +22277,15 @@ MonoBehaviour:
   speed: 1
   dropList: []
   amtDropped: 0
-  attackRadius: 1
+  attackRadius:
+  - 0.5
+  - 3
+  - 5
+  timerLen: 4
+  offset: {x: 0.6, y: -0.3}
+  spawnfxPrefab: {fileID: 5636324103066704458, guid: 08b35e21217172842aa3cd2830eacc91, type: 3}
+  spawnPrefab: {fileID: 3640927093474625215, guid: 0aa2424dc55a0da409437fa35a23689d, type: 3}
+  atkPrefab: {fileID: 852980992625924966, guid: 7e6fc7aaec0d3e5468ec6f58a284da5b, type: 3}
 --- !u!212 &7911453135167923013
 SpriteRenderer:
   m_ObjectHideFlags: 0
