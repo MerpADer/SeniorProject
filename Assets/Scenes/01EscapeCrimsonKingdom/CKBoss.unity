@@ -14721,7 +14721,7 @@ GameObject:
   - component: {fileID: 1638843610}
   m_Layer: 0
   m_Name: StoneSlope
-  m_TagString: Untagged
+  m_TagString: Slope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22274,7 +22274,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   FlashWhite: {fileID: 2100000, guid: 122ea7ad4a6ab4347a4d6f78af5a0dcc, type: 2}
   hp: 25
-  speed: 1
+  speed: 0.4
   dropList: []
   amtDropped: 0
   attackRadius:
