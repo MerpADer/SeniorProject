@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+using UnityEngine.UI;
 
 public class EnemyKing : EnemyBaseClass
 {
 
     private int dir;
 
+    private int temp;
+
     private float timer;
+
+    private bool isDead;
+
+    private CinemachineVirtualCamera cam;
+
+    private SceneEditor sceneEditor;
 
     [Header("Attack Variables")]
     [SerializeField] List<float> attackRadius;
@@ -19,12 +29,17 @@ public class EnemyKing : EnemyBaseClass
     [SerializeField] GameObject spawnPrefab;
     [SerializeField] GameObject atkPrefab;
 
-    private int temp;
+    [Header("Win Variables")]
+    [SerializeField] GameObject winScreen;
+    [SerializeField] Button mainMenu;
 
     void Start()
     {
+        isDead = false;
         dir = -1;
         temp = 2;
+        cam = FindObjectOfType<CinemachineVirtualCamera>();
+        sceneEditor = FindObjectOfType<SceneEditor>();
     }
 
     void Update()
@@ -48,7 +63,7 @@ public class EnemyKing : EnemyBaseClass
             anim.SetBool("Walking", false);
         }
 
-        if (timer <= 0 && playerIsDetected(attackRadius[temp - 1]))
+        if (timer <= 0 && playerIsDetected(attackRadius[temp - 1]) && !isDead)
         {
             timer = timerLen;
             if (temp == 1)
@@ -67,7 +82,7 @@ public class EnemyKing : EnemyBaseClass
             temp = Random.Range(1, 4);
         }
 
-        DeathConditions();
+        DeathConditionsBoss();
     }
 
     void Move()
@@ -100,6 +115,27 @@ public class EnemyKing : EnemyBaseClass
             Instantiate(atkPrefab, new Vector2(transform.position.x + (offset.x + i * 0.7f) * dir, transform.position.y + offset.y), Quaternion.identity);
         }
 
+    }
+
+    public void DeathConditionsBoss()
+    {
+        if (hp <= 0)
+        {
+            isDead = true;
+            anim.SetBool("Die", true);
+
+            // hide damage collider
+            Destroy(dmgBox);
+
+            cam.Follow = transform;
+            cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset = new Vector2(0, 0);
+            Time.timeScale = 0.25f;
+
+            Player.GetComponent<Movement>().enabled = false;
+            Player.GetComponent<Health>().enabled = false;
+            winScreen.SetActive(true);
+            mainMenu.onClick.AddListener(delegate { sceneEditor.NextScene(0); });
+        }
     }
 
 }
