@@ -2589,12 +2589,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 6959461369712307213}
   Rooms:
-  - nameOfScene: 
-    nameDisplay: 
-  roomThreshold: 0
+  - nameOfScene: CKShop
+    nameDisplay: Shop
+  - nameOfScene: CKBattle01
+    nameDisplay: Battle!
+  - nameOfScene: CKBattle02
+    nameDisplay: Battle!
+  - nameOfScene: CKBattle03
+    nameDisplay: Battle!
+  - nameOfScene: CKBattle04
+    nameDisplay: Battle!
+  - nameOfScene: CKBattle05
+    nameDisplay: Battle!
+  roomThreshold: 2
   BossRoom:
-    nameOfScene: 
-    nameDisplay: 
+    nameOfScene: CKBoss
+    nameDisplay: Boss
 --- !u!82 &2325944801180741287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2708,6 +2718,27 @@ MonoBehaviour:
     isLooping: 0
     secondaryTrack: {fileID: 8300000, guid: a803da7fbf431fb4f890d967d49b7e7c, type: 3}
   - mainTrack: {fileID: 8300000, guid: 90e163166f677e14f9b541ad06a43c6a, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 90e163166f677e14f9b541ad06a43c6a, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
     isLooping: 1
     secondaryTrack: {fileID: 0}
 --- !u!1 &7105897290610077117

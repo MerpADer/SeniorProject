@@ -1556,10 +1556,6 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 3814220466266823858, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
-      propertyPath: sceneIndexMusic.Array.data[1].mainTrack
-      value: 
-      objectReference: {fileID: 8300000, guid: 90e163166f677e14f9b541ad06a43c6a, type: 3}
     - target: {fileID: 6959461370966438164, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_Name
       value: SceneManager
