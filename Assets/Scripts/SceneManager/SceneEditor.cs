@@ -16,7 +16,12 @@ public class SceneEditor : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        // replace with singleton at some point maybe
+        if (gameObject.tag == "SceneEditor")
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        
         // searching children for "OptionsMenu"
         optionsMenu = gameObject.transform.Find("OptionsMenu").gameObject;
     }

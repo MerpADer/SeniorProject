@@ -11,6 +11,7 @@ TagManager:
   - Shredder
   - Money
   - ItemImage
+  - SceneEditor
   layers:
   - Default
   - TransparentFX

@@ -17,8 +17,6 @@ public class EnemyKing : EnemyBaseClass
 
     private CinemachineVirtualCamera cam;
 
-    private SceneEditor sceneEditor;
-
     [Header("Attack Variables")]
     [SerializeField] List<float> attackRadius;
 
@@ -31,7 +29,6 @@ public class EnemyKing : EnemyBaseClass
 
     [Header("Win Variables")]
     [SerializeField] GameObject winScreen;
-    [SerializeField] Button mainMenu;
 
     void Start()
     {
@@ -39,7 +36,6 @@ public class EnemyKing : EnemyBaseClass
         dir = -1;
         temp = 2;
         cam = FindObjectOfType<CinemachineVirtualCamera>();
-        sceneEditor = FindObjectOfType<SceneEditor>();
     }
 
     void Update()
@@ -134,7 +130,7 @@ public class EnemyKing : EnemyBaseClass
             Player.GetComponent<Movement>().enabled = false;
             Player.GetComponent<Health>().enabled = false;
             winScreen.SetActive(true);
-            mainMenu.onClick.AddListener(delegate { sceneEditor.NextScene(0); });
+            
         }
     }
 
