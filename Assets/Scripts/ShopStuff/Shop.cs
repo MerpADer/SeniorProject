@@ -96,7 +96,7 @@ public class Shop : MonoBehaviour
 
         public int CalculatePrice(int value)
         {
-            return (value * 2 + Random.Range(0, 2)); 
+            return (value * 11 + Random.Range(0, 2)); 
         }
 
         public void PurchaseItem(ItemStats selectedItem, AudioSource audio, AudioClip canBuy, AudioClip cannotBuy)
@@ -161,8 +161,8 @@ public class Shop : MonoBehaviour
 
     public void openShop()
     {
-        player.GetComponent<Movement>().enabled = false;
-        shopMenu.SetActive(true);
+        player.GetComponent<Movement>().enabled = !player.GetComponent<Movement>().enabled;
+        shopMenu.SetActive(!shopMenu.activeSelf);
     } 
 
 }

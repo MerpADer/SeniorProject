@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -50,6 +51,11 @@ public class Movement : MonoBehaviour
         anim = GetComponent<Animator>();
         // Set player state
         playerState = PlayerState.Normal;
+
+        if(gameObject.tag == "Player")
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void Update()
@@ -170,14 +176,28 @@ public class Movement : MonoBehaviour
         rb.gravityScale = 1;
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
+        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
         walk.enabled = true;
+        spr.enabled = true;
+        walk.enabled = true;
+        oneShotSound.enabled = true;
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
+        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         walk.enabled = false;
     }
 
+    // if I have to do something at the very start a new scene, do it here
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        spr.enabled = true;
+        walk.enabled = true;
+        oneShotSound.enabled = true;
+    }
 }

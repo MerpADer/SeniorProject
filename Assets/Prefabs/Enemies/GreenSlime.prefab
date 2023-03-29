@@ -919,4 +919,4 @@ MonoBehaviour:
   dropList:
   - {fileID: 8846818047283672470, guid: 3a8f193e2b3b05b46975b4649dc483c5, type: 3}
   amtDropped: 5
-  timeToJump: 3
+  timeToJump: 2
