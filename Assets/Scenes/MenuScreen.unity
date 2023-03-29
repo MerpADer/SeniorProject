@@ -1564,6 +1564,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6959461370966438164, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_TagString
+      value: SceneEditor
+      objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438166, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_RootOrder
       value: 1

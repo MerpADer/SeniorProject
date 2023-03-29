@@ -400,8 +400,8 @@ RectTransform:
   m_GameObject: {fileID: 202217151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2144630922}
   - {fileID: 1381905564}
@@ -415,7 +415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 275}
+  m_AnchoredPosition: {x: 0, y: -157}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &202217153
@@ -476,6 +476,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202217151}
   m_CullTransparentMesh: 1
+--- !u!1 &244849453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8707509322513552477, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+  m_PrefabInstance: {fileID: 1262933814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &244849454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244849453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e2c6acfd2f0dd49af6c9a285f2bcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: CKBattle01
 --- !u!1 &363485814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1472,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: diatxt
+      value: 
+      objectReference: {fileID: 363485817}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: nametxt
+      value: 
+      objectReference: {fileID: 483436523}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 1065988616}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: backText
+      value: 
+      objectReference: {fileID: 456022268}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: PortraitPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c407c20231bc6f4b918c8188b976326, type: 3}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[0]
+      value: ABANDON ALL HOPE YE WHO ENTER HERE
+      objectReference: {fileID: 0}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[1]
+      value: is the writing scrawled on the wall of the Crimson Kingdom.
+      objectReference: {fileID: 0}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[2]
+      value: Tucked away between Melpomone and Thalia,
+      objectReference: {fileID: 0}
+    - target: {fileID: -5464651581334564741, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
+      propertyPath: Dialogue.Array.data[3]
+      value: the state hasn't thought of peace in centuries.
+      objectReference: {fileID: 0}
     - target: {fileID: -206152756279943794, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
       propertyPath: diatxt
       value: 
