@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -542,7 +542,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c7cbbb91d4124c942a72079574b18f6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -560,8 +560,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1447610131
-  m_SortingLayer: 1
+  m_SortingLayerID: 733342293
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a176ea68a270b56478d0ce363725ec52, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1552,13 +1552,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 41308997872968823, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36.599983
+      objectReference: {fileID: 0}
+    - target: {fileID: 41308997872968823, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -115.299995
+      objectReference: {fileID: 0}
+    - target: {fileID: 170196516559893832, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 170196516559893832, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 604391342065513593, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604391342065513593, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2325944801180741287, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_Volume
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 3723162904231319535, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_fontSize
+      value: 52.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723162904231319535, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 852cab3a652ddda498f998e47fc107f8, type: 2}
+    - target: {fileID: 3723162904231319535, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 52.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723162904231319535, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7118136988833138606, guid: 852cab3a652ddda498f998e47fc107f8, type: 2}
     - target: {fileID: 3814220466266823858, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: sceneIndexMusic.Array.size
-      value: 8
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749440792743565383, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749440792743565383, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -53.868
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964245913754616029, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 272.8315
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058421278722251080, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438164, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_Name
@@ -1639,6 +1695,14 @@ PrefabInstance:
     - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: Rooms.Array.data[4].nameOfScene
       value: CKBattle05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939706846781103522, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939706846781103522, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
@@ -2459,7 +2523,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c7cbbb91d4124c942a72079574b18f6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2477,8 +2541,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1447610131
-  m_SortingLayer: 1
+  m_SortingLayerID: 733342293
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ea36d98849f65b847b6cf19e02351242, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -2543,7 +2607,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c7cbbb91d4124c942a72079574b18f6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2561,8 +2625,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1447610131
-  m_SortingLayer: 1
+  m_SortingLayerID: 733342293
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 41bbec26731a6cd4cbd6732fb82883b3, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
