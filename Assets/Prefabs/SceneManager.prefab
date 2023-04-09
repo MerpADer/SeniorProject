@@ -2400,7 +2400,7 @@ GameObject:
   - component: {fileID: 3814220466266823858}
   m_Layer: 0
   m_Name: SceneManager
-  m_TagString: Untagged
+  m_TagString: SceneEditor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2438,8 +2438,6 @@ MonoBehaviour:
   Rooms:
   - nameOfScene: CKShop
     nameDisplay: Shop
-  - nameOfScene: CKBattle01
-    nameDisplay: Battle!
   - nameOfScene: CKBattle02
     nameDisplay: Battle!
   - nameOfScene: CKBattle03

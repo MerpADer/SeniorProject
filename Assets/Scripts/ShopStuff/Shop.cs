@@ -163,6 +163,7 @@ public class Shop : MonoBehaviour
     {
         player.GetComponent<Movement>().enabled = !player.GetComponent<Movement>().enabled;
         shopMenu.SetActive(!shopMenu.activeSelf);
+        player.transform.position = new Vector2(transform.position.x, player.transform.position.y);
     } 
 
 }
