@@ -96,7 +96,7 @@ public class Shop : MonoBehaviour
 
         public int CalculatePrice(int value)
         {
-            return (value * 11 + Random.Range(0, 2)); 
+            return (value * 20 + Random.Range(0, 5)); 
         }
 
         public void PurchaseItem(ItemStats selectedItem, AudioSource audio, AudioClip canBuy, AudioClip cannotBuy)
