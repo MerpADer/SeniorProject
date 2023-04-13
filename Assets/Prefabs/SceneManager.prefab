@@ -2560,6 +2560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndexMusic:
   - mainTrack: {fileID: 8300000, guid: 82f38d2872195be488be0028a81c4b16, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 8300000, guid: a803da7fbf431fb4f890d967d49b7e7c, type: 3}
+  - mainTrack: {fileID: 8300000, guid: 82f38d2872195be488be0028a81c4b16, type: 3}
     isLooping: 0
     secondaryTrack: {fileID: 8300000, guid: a803da7fbf431fb4f890d967d49b7e7c, type: 3}
   - mainTrack: {fileID: 8300000, guid: 90e163166f677e14f9b541ad06a43c6a, type: 3}

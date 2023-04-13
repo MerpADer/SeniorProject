@@ -1640,10 +1640,6 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 7118136988833138606, guid: 852cab3a652ddda498f998e47fc107f8, type: 2}
-    - target: {fileID: 3814220466266823858, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
-      propertyPath: sceneIndexMusic.Array.size
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5749440792743565383, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -36.6
