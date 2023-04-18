@@ -2589,6 +2589,9 @@ MonoBehaviour:
   - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
     isLooping: 1
     secondaryTrack: {fileID: 0}
+  - mainTrack: {fileID: 8300000, guid: 5a723df64afe76442af8e26e48589f85, type: 3}
+    isLooping: 1
+    secondaryTrack: {fileID: 0}
 --- !u!1 &7105897290610077117
 GameObject:
   m_ObjectHideFlags: 0
