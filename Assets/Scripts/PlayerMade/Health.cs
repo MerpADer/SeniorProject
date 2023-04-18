@@ -34,7 +34,6 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         movement = GetComponent<Movement>();
         spr = GetComponent<SpriteRenderer>();
-        cam = FindObjectOfType<Camera>();
 
         defaultMat = spr.material;
     }
@@ -76,6 +75,7 @@ public class Health : MonoBehaviour
             {
                 movement.oneShotSound.PlayOneShot(playerDeath);
                 deathMenu.SetActive(true);
+                cam = FindObjectOfType<Camera>();
                 cam.cullingMask = layerMask;
             }
         }

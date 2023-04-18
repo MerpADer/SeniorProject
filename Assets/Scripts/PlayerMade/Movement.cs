@@ -144,7 +144,10 @@ public class Movement : MonoBehaviour
         {
             money += collision.gameObject.GetComponentInParent<Money>().value;
             oneShotSound.PlayOneShot(collectMoney);
-            Destroy(collision.transform.parent.gameObject);
+            if (collision.transform.parent.gameObject != null)
+            {
+                Destroy(collision.transform.parent.gameObject);
+            }
             Destroy(collision.gameObject);
             moneyText.text = money.ToString();
         }
