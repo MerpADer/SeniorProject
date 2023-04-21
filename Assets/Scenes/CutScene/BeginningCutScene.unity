@@ -210,13 +210,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1753270095}
         m_TargetAssemblyTypeName: CanvasFunctions, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: MenuScreen
+          m_StringArgument: CKBattle01
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1753270095}
@@ -622,24 +622,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202217151}
   m_CullTransparentMesh: 1
---- !u!1 &244849453 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8707509322513552477, guid: 08594e1c608b3f7408bf17696eb170b9, type: 3}
-  m_PrefabInstance: {fileID: 1262933814}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &244849454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244849453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7e2c6acfd2f0dd49af6c9a285f2bcb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: CKBattle01
 --- !u!1 &363485814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skip
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6713e34cb0cf25e4390837f6cd5b61b1, type: 2}
   m_sharedMaterial: {fileID: 461272765764115940, guid: 6713e34cb0cf25e4390837f6cd5b61b1, type: 2}

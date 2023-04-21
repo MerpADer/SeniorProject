@@ -14,11 +14,12 @@ public class CanvasFunctions : MonoBehaviour
         audioSource.PlayOneShot(sound);
     }
 
-    public void LoadScene(int scene)
+    public void LoadScene(string str)
     {
+        print("A");
         sceneEditor = FindObjectOfType<SceneEditor>();
 
-        sceneEditor.NextScene(scene);
+        sceneEditor.WrapperNextScene(str);
     }
 
 }
