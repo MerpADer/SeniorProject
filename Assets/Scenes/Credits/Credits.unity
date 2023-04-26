@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 6058421278722251080, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438164, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -302,6 +306,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6959461370966438167, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
       propertyPath: Rooms.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979778017352725557, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979778017352725557, guid: 29a5f1fb66f4b5645a0e884a01baa54e, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

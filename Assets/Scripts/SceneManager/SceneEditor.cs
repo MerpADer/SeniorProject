@@ -84,7 +84,6 @@ public class SceneEditor : MonoBehaviour
 
     public IEnumerator NextScene(string SceneName)
     {
-        print("B");
         fadeOut();
 
         yield return new WaitForSeconds(2f);

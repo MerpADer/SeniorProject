@@ -16,7 +16,6 @@ public class CanvasFunctions : MonoBehaviour
 
     public void LoadScene(string str)
     {
-        print("A");
         sceneEditor = FindObjectOfType<SceneEditor>();
 
         sceneEditor.WrapperNextScene(str);

@@ -10,7 +10,15 @@ public class SetAudio : MonoBehaviour
 
     private void Start()
     {
+        // PlayerPrefs.DeleteAll(); use to test playerprefs
+
+        if (!PlayerPrefs.HasKey("VolumeValue"))
+        {
+            PlayerPrefs.SetFloat("VolumeValue", 0.5f);
+        }
+
         LoadValues();
+
     }
 
     public void SaveValues()
