@@ -21,4 +21,13 @@ public class CanvasFunctions : MonoBehaviour
         sceneEditor.WrapperNextScene(str);
     }
 
+    public void UnFreezeTime(int scene)
+    {
+        Time.timeScale = 1;
+
+        sceneEditor = FindObjectOfType<SceneEditor>();
+
+        sceneEditor.NextScene(scene);
+    }
+
 }
